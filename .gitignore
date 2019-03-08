@@ -3,3 +3,6 @@
 ################################################################################
 
 /UserTest/.vs/UserTest/v15
+/UserTest/UserTest/bin
+/UserTest/UserTest/obj
+/UserTest/UserTest/UserTest.csproj.user
