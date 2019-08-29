@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using UserTest.Model;
 using UserTest.Helpers;
+using Android.Views;
 
 namespace UserTest.Views
 {
@@ -16,18 +17,22 @@ namespace UserTest.Views
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_main);
-            
-            if (!App.Current.User.HasMotion) Window.EnterTransition = null;
 
-            FindViewById<TextView>(Resource.Id.txvMotion).Text = $"Motion: {(App.Current.User.HasMotion ? "ON" : "OFF")}";
+            if (!App.Current.User.HasMotion) Window.EnterTransition = null;
+            HasMotion();
 
             var connection = Util.HasConnection(this);
-            FindViewById<TextView>(Resource.Id.txvConnection).Text = $"Connection: {(connection ? "ON" : "OFF")}";
+            HasConnection(connection);
 
+            await CanSync(connection);
+        }
+
+        private async System.Threading.Tasks.Task CanSync(bool connection)
+        {
             if (connection)
             {
                 var collection = await WebServices.IsDataCollectionActive();
-                FindViewById<TextView>(Resource.Id.txvCollection).Text = $"Collection: {(collection ? "ON" : "OFF")}";
+                FindViewById<TextView>(Resource.Id.txvCollection).Text = $"Collection: {collection}";
 
                 if (App.Current.User.IsSynced)
                     return;
@@ -43,7 +48,7 @@ namespace UserTest.Views
                     {
                         Toast.MakeText(this, $"Dados enviados com sucesso!", ToastLength.Long).Show();
                         App.Current.User.IsSynced = true;
-                        using(var conn = App.Current.GetConnection())
+                        using (var conn = App.Current.GetConnection())
                         {
                             conn.Update(App.Current.User);
                         }
@@ -54,6 +59,45 @@ namespace UserTest.Views
                     Toast.MakeText(this, $"Obrigado pela colaboração, mas já encerramos 🙁", ToastLength.Long).Show();
                 }
             }
+        }
+
+        private void HasConnection(bool connection)
+        {
+            FindViewById<TextView>(Resource.Id.txvConnection).Text = $"Connection: {connection}";
+        }
+
+        private void HasMotion()
+        {
+            FindViewById<TextView>(Resource.Id.txvMotion).Text = $"Motion: {App.Current.User.HasMotion}";
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+#if DEBUG
+            MenuInflater.Inflate(Resource.Menu.menu_debug, menu);
+            menu.FindItem(Resource.Id.toggle_motion).SetChecked(App.Current.User.HasMotion);
+            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.User.DarkTheme);
+#endif
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.toggle_motion:
+                    item.SetChecked(!item.IsChecked);
+                    App.ToggleMotion();
+                    HasMotion();
+                    break;
+                case Resource.Id.toggle_dark:
+                    App.ToggleTheme();
+                    break;
+                default:
+                    break;
+            }
+
+            return true;
         }
     }
 }

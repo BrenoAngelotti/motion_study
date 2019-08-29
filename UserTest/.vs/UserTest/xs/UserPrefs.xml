@@ -1,14 +1,21 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/MainActivity.cs">
     <Files>
-      <File FileName="UserTest/Views/MainActivity.cs" Line="35" Column="32" />
+      <File FileName="UserTest/Views/MainActivity.cs" Line="63" Column="1" />
+      <File FileName="UserTest/Resources/menu/menu_debug.xml" Line="18" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
-              <Node name="Resources" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True" />
+                <Node name="menu" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
               <Node name="Views" expanded="True">
                 <Node name="MainActivity.cs" selected="True" />
               </Node>
@@ -19,7 +26,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0042089541" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

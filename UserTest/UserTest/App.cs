@@ -43,5 +43,16 @@ namespace UserTest
             var conn = new SQLiteConnection(DbPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.SharedCache);
             return conn;
         }
+
+        public static void ToggleMotion()
+        {
+            Current.User.HasMotion ^= true;
+        }
+
+        public static void ToggleTheme()
+        {
+            Toast.MakeText(Context, "Implement theme toggle", ToastLength.Short).Show();
+        }   
     }
+
 }

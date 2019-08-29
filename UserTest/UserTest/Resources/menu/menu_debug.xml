@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/toggle_motion"
+        android:title="Motion"
+        android:checkable="true"
+        app:showAsAction="never"
+    />
+
+    <item
+        android:id="@+id/toggle_dark"
+        android:title="Dark"
+        android:checkable="true"
+        app:showAsAction="never"
+    />
+</menu>

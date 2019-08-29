@@ -1,14 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-      <!-- Customize your theme here. -->
-      <item name="colorPrimary">@color/colorPrimary</item>
-      <item name="colorPrimaryDark">@color/colorPrimary</item>
-      <item name="colorAccent">@color/colorAccentBlue</item>
-      <item name="android:textColorPrimary">@color/colorAccentPurple</item>
-      <item name="android:windowActivityTransitions">true</item>
-      <item name="windowActionModeOverlay">true</item>
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/colorPrimaryTextDark</item>
+        <!--item name="attr:colorBackground">@color/colorBackgroundDark</item -->
+
+            <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <!--item name="attr:colorBackground">@color/colorBackground</item -->
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowActionModeOverlay">true</item>
     </style>
 
 </resources>
