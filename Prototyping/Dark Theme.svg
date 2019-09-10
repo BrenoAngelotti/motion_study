@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="120" viewBox="0 0 86 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #303030;
+      }
+
+      .cls-2 {
+        fill: #212121;
+      }
+
+      .cls-3 {
+        opacity: 0.54;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #009688;
+      }
+
+      .cls-6 {
+        filter: url(#ToolBar);
+      }
+    </style>
+    <filter id="ToolBar" x="0" y="6" width="86" height="26" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Dark_Theme" data-name="Dark Theme" transform="translate(-96 -939)">
+    <rect id="Background" class="cls-1" width="80" height="120" transform="translate(99 939)"/>
+    <g id="AppBar">
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, 96, 939)">
+        <rect id="ToolBar-2" data-name="ToolBar" class="cls-2" width="80" height="20" transform="translate(3 8)"/>
+      </g>
+      <rect id="StatusBar" width="80" height="8" transform="translate(99 939)"/>
+    </g>
+    <g id="Text" class="cls-3">
+      <rect id="_4" data-name="4" class="cls-4" width="32" height="4" transform="translate(107 1011)"/>
+      <rect id="_3" data-name="3" class="cls-4" width="64" height="4" transform="translate(107 999)"/>
+      <rect id="_2" data-name="2" class="cls-4" width="64" height="4" transform="translate(107 987)"/>
+      <rect id="_1" data-name="1" class="cls-4" width="64" height="4" transform="translate(107 975)"/>
+    </g>
+    <rect id="Button" class="cls-5" width="15" height="4" transform="translate(156 1047)"/>
+  </g>
+</svg>

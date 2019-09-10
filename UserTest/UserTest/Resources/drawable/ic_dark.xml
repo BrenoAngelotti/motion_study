@@ -1,0 +1,52 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="86dp"
+    android:height="120dp"
+    android:viewportWidth="86"
+    android:viewportHeight="120">
+    <group android:name="group_1">
+        <path
+            android:name="path_1"
+            android:pathData="M 3 0 L 83 0 L 83 120 L 3 120 Z"
+            android:fillColor="@color/colorBackgroundDark"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_2"
+            android:pathData="M 3 8 L 83 8 L 83 28 L 3 28 Z"
+            android:fillColor="@color/colorPrimary"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_3"
+            android:pathData="M 3 0 L 83 0 L 83 8 L 3 8 Z"
+            android:fillColor="@color/colorPrimaryDark"
+            android:strokeWidth="1"/>
+        <group android:name="group">
+            <path
+                android:name="path_4"
+                android:pathData="M 11 72 L 43 72 L 43 76 L 11 76 Z"
+                android:fillColor="@color/colorSecondaryTextDark"
+                android:strokeWidth="1"/>
+            <path
+                android:name="path_5"
+                android:pathData="M 11 60 L 75 60 L 75 64 L 11 64 Z"
+                android:fillColor="@color/colorSecondaryTextDark"
+                android:strokeWidth="1"/>
+            <path
+                android:name="path_6"
+                android:pathData="M 11 48 L 75 48 L 75 52 L 11 52 Z"
+                android:fillColor="@color/colorSecondaryTextDark"
+                android:strokeWidth="1"/>
+            <path
+                android:name="path_7"
+                android:pathData="M 11 36 L 75 36 L 75 40 L 11 40 Z"
+                android:fillColor="@color/colorPrimaryTextDark"
+                android:strokeWidth="1"/>
+        </group>
+        <path
+            android:name="path_8"
+            android:pathData="M 60 108 L 75 108 L 75 112 L 60 112 Z"
+            android:fillColor="@color/colorAccent"
+            android:strokeWidth="1"/>
+    </group>
+</vector>

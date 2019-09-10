@@ -18,13 +18,15 @@ namespace UserTest.Views
 
             SetContentView(Resource.Layout.activity_main);
 
-            if (!App.Current.User.HasMotion) Window.EnterTransition = null;
+            /*if (!App.Current.User.HasMotion) Window.EnterTransition = null;
             HasMotion();
 
             var connection = Util.HasConnection(this);
             HasConnection(connection);
 
-            await CanSync(connection);
+            await CanSync(connection);*/
+
+            StartActivity(new Android.Content.Intent(this, typeof(ThemeActivity)));
         }
 
         private async System.Threading.Tasks.Task CanSync(bool connection)

@@ -11,8 +11,11 @@
     <color name="colorSecondaryText">#404040</color>
     <color name="colorSecondaryTextDark">#9A9A9F</color>
 
-    <color name="colorBackground">#F0F0F0</color>
-    <color name="colorBackgroundDark">#202020</color>
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorBackgroundDark">#303030</color>
+
+    <color name="colorSurface">#E2E2E2</color>
+    <color name="colorSurfaceDark">#424242</color>
 
     <color name="colorWidgetBackground">#26282F</color>
 </resources>

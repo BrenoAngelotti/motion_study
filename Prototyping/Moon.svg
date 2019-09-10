@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e0e0e0;
+      }
+    </style>
+  </defs>
+  <g id="Moon" transform="translate(80 80) rotate(180)">
+    <rect id="Boundary" class="cls-1" width="80" height="80"/>
+    <path id="moon-waning-crescent" class="cls-2" d="M0,32.793A32.79,32.79,0,0,1,42.627,1.511a32.79,32.79,0,0,0,0,62.564A32.79,32.79,0,0,1,0,32.793Z" transform="translate(36.186 0.944) rotate(30)"/>
+  </g>
+</svg>
