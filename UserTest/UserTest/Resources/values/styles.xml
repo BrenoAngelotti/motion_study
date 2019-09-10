@@ -9,7 +9,7 @@
         <item name="android:textColorPrimary">@color/colorPrimaryTextDark</item>
         <!--item name="attr:colorBackground">@color/colorBackgroundDark</item -->
 
-            <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
@@ -17,6 +17,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
 
         <item name="android:textColorPrimary">@color/colorPrimary</item>
         <!--item name="attr:colorBackground">@color/colorBackground</item -->

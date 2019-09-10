@@ -12,6 +12,15 @@
         android:layout_height="match_parent"
         android:background="@color/colorBackgroundDark"
         android:alpha="0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha um tema para continuar"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="32dp"
+        android:textSize="@dimen/abc_text_size_large_material"/>
     <RelativeLayout
         android:id="@+id/rlSelectionIndicator"
         android:layout_width="100dp"
@@ -78,6 +87,7 @@
                     android:paddingVertical="16dp"
                     android:paddingHorizontal="32dp"
                     android:checked="true"
+                    android:clickable="true"
                     android:button="@null"
                     android:layout_margin="8dp"
                     android:drawableRight="@drawable/ic_light"/>
@@ -89,10 +99,20 @@
                     android:paddingVertical="16dp"
                     android:paddingHorizontal="32dp"
                     android:checked="false"
+                    android:clickable="true"
                     android:button="@null"
                     android:layout_margin="8dp"
                     android:drawableRight="@drawable/ic_dark"/>
             </RadioGroup>
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:textColor="@android:color/white"
+                android:text="Continuar"/>
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
