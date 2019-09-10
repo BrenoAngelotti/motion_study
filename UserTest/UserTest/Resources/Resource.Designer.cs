@@ -1881,6 +1881,9 @@ namespace UserTest
 			// aapt resource value: 0x7f080051
 			public const int disabled_alpha_material_light = 2131230801;
 			
+			// aapt resource value: 0x7f08009d
+			public const int doubleSizeUnit = 2131230877;
+			
 			// aapt resource value: 0x7f080000
 			public const int fastscroll_default_thickness = 2131230720;
 			
@@ -1889,6 +1892,9 @@ namespace UserTest
 			
 			// aapt resource value: 0x7f080002
 			public const int fastscroll_minimum_range = 2131230722;
+			
+			// aapt resource value: 0x7f08009b
+			public const int halfSizeUnit = 2131230875;
 			
 			// aapt resource value: 0x7f080052
 			public const int highlight_alpha_material_colored = 2131230802;
@@ -1965,6 +1971,15 @@ namespace UserTest
 			// aapt resource value: 0x7f08009a
 			public const int notification_top_pad_large_text = 2131230874;
 			
+			// aapt resource value: 0x7f08009f
+			public const int quadrupleSizeUnit = 2131230879;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int quintupleSizeUnit = 2131230880;
+			
+			// aapt resource value: 0x7f08009c
+			public const int sizeUnit = 2131230876;
+			
 			// aapt resource value: 0x7f080059
 			public const int tooltip_corner_radius = 2131230809;
 			
@@ -1988,6 +2003,9 @@ namespace UserTest
 			
 			// aapt resource value: 0x7f080060
 			public const int tooltip_y_offset_touch = 2131230816;
+			
+			// aapt resource value: 0x7f08009e
+			public const int tripleSizeUnit = 2131230878;
 			
 			static Dimension()
 			{
@@ -4565,6 +4583,9 @@ namespace UserTest
 			
 			// aapt resource value: 0x7f0b0178
 			public const int Widget_Design_TextInputLayout = 2131427704;
+			
+			// aapt resource value: 0x7f0b0182
+			public const int customRadioButton = 2131427714;
 			
 			static Style()
 			{

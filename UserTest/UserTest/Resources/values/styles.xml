@@ -26,4 +26,17 @@
         <item name="windowActionModeOverlay">true</item>
     </style>
 
+    <style name="customRadioButton">
+        <item name="android:layout_margin">@dimen/sizeUnit</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@drawable/radio_button</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">@dimen/sizeUnit</item>
+    </style>
+
 </resources>

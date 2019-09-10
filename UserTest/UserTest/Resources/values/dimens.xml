@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <dimen name="halfSizeUnit">4dp</dimen>
+    <dimen name="sizeUnit">8dp</dimen>
+    <dimen name="doubleSizeUnit">16dp</dimen>
+    <dimen name="tripleSizeUnit">24dp</dimen>
+    <dimen name="quadrupleSizeUnit">32dp</dimen>
+    <dimen name="quintupleSizeUnit">40dp</dimen>
+</resources>
