@@ -12,10 +12,10 @@
     <color name="colorSecondaryTextDark">#9A9A9F</color>
 
     <color name="colorBackground">#FAFAFA</color>
-    <color name="colorBackgroundDark">#303030</color>
+    <color name="colorBackgroundDark">#000000</color>
 
     <color name="colorSurface">#E2E2E2</color>
-    <color name="colorSurfaceDark">#424242</color>
+    <color name="colorSurfaceDark">#1c1c1e</color>
 
     <color name="colorWidgetBackground">#26282F</color>
 </resources>
