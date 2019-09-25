@@ -19,9 +19,18 @@
 
     <string name="text_question_directive">Selecione as opções que melhor representam seu sentimento em relação à tela anterior</string>
     <string name="text_first_question">Estava certo de como interagir com a tela</string>
-    <string name="text_second_question">Estou certo de que respondi com a opçào {0}</string>
+    <string name="text_second_question">Estou certo de que respondi com a opção {0}</string>
 
-    <string name="text_theme_question">Escolha um tema para continuar</string>
+    <string name="text_theme_question">Escolha um tema para começar</string>
     
     <string name="action_continue">Continuar</string>
+    
+    <string-array name="arr_answer_options">
+        <item>Concordo plenamente</item>
+        <item>Concordo</item>
+        <item>Não concordo nem discordo</item>
+        <item>Discordo</item>
+        <item>Discordo plenamente</item>
+    </string-array>
+
 </resources>

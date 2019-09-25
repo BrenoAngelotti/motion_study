@@ -105,6 +105,22 @@ namespace UserTest
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0f0000
+			public const int arr_answer_options = 2131689472;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -3279,8 +3295,8 @@ namespace UserTest
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0f0000
-			public const int menu_debug = 2131689472;
+			// aapt resource value: 0x7f100000
+			public const int menu_debug = 2131755008;
 			
 			static Menu()
 			{
