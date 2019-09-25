@@ -10,7 +10,7 @@ using UserTest.Model;
 
 namespace UserTest.Views
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.Light", MainLauncher = true)]
     public class SplashActivity : Activity
     {
         RelativeLayout Foreground { get; set; }
@@ -52,7 +52,7 @@ namespace UserTest.Views
 
         async void Startup()
         {
-            await Task.Delay(2000); // Simulate a bit of startup work.
+            await Task.Delay(1000);
             RunOnUiThread(() => {
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             });

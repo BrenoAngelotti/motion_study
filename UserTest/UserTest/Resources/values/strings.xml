@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">TCC</string>
     <string name="action_settings">Settings</string>
+
+    <string name="label_light">Claro</string>
+    <string name="label_dark">Escuro</string>
+
+    <string name="label_dog">Cão</string>
+    <string name="label_cat">Gato</string>
+
+    <string name="label_hot_dog">Hot Dog</string>
+    <string name="label_pizza">Pizza</string>
+
+    <string name="label_cake">Bolo</string>
+    <string name="label_ice_cream">Sorvete</string>
+
+    <string name="label_sing">Cantar</string>
+    <string name="label_dance">Dançar</string>
+
+    <string name="text_question_directive">Selecione as opções que melhor representam seu sentimento em relação à tela anterior</string>
+    <string name="text_first_question">Estava certo de como interagir com a tela</string>
+    <string name="text_second_question">Estou certo de que respondi com a opçào {0}</string>
+
+    <string name="text_theme_question">Escolha um tema para continuar</string>
+    
+    <string name="action_continue">Continuar</string>
 </resources>

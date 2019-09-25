@@ -19,6 +19,7 @@ namespace UserTest
     public class App : Application
     {
         public static App Current { get; private set; }
+        public bool DarkTheme { get; set; }
         public User User { get; set; } 
         public static string DbPath { get { return System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "database.db"); } }
 
@@ -47,11 +48,6 @@ namespace UserTest
         public static void ToggleMotion()
         {
             Current.User.HasMotion ^= true;
-        }
-
-        public static void ToggleTheme()
-        {
-            Toast.MakeText(Context, "Implement theme toggle", ToastLength.Short).Show();
         }   
     }
 

@@ -1,20 +1,23 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/colors.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/layout/activity_evaluation.axml">
     <Files>
-      <File FileName="UserTest/Resources/values/colors.xml" Line="6" Column="38" />
+      <File FileName="UserTest/Views/ThemeActivity.cs" Line="53" Column="1" />
+      <File FileName="UserTest/App.cs" Line="1" Column="1" />
+      <File FileName="UserTest/Resources/values/strings.xml" Line="22" Column="85" />
+      <File FileName="UserTest/Views/EvaluationActivity.cs" Line="21" Column="68" />
+      <File FileName="UserTest/Resources/layout/activity_evaluation.axml" Line="49" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
+              <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
-                <Node name="menu" expanded="True" />
-                <Node name="values" expanded="True">
-                  <Node name="colors.xml" selected="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="activity_evaluation.axml" selected="True" />
                 </Node>
+                <Node name="values" expanded="True" />
               </Node>
               <Node name="Views" expanded="True" />
             </Node>

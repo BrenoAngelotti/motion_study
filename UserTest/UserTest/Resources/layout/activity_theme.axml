@@ -15,16 +15,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escolha um tema para continuar"
+        android:text="@string/text_theme_question"
         android:layout_alignParentTop="true"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/four_size_unit"
         android:textSize="@dimen/abc_text_size_large_material"/>
     <RelativeLayout
         android:id="@+id/rlSelectionIndicator"
         android:layout_width="100dp"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_centerInParent="true">
         <ImageView
             android:id="@+id/ivSun"
@@ -47,17 +47,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="2">
+        android:weightSum="5">
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="2"/>
     
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1">
+            android:layout_weight="3">
             <View
                 android:id="@+id/vwSkyline"
                 android:layout_alignParentBottom="true"
@@ -73,42 +73,47 @@
                 android:background="@drawable/ic_skyline"
                 android:backgroundTint="@color/colorSurfaceDark"
                 android:alpha="0"/>
-            <RadioGroup
-                android:id="@+id/rgTheme"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <RadioButton
-                    style="@style/customRadioButton"
-                    android:id="@+id/rbLight"
-                    android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="bottom|right">
+                <RadioGroup
+                    android:id="@+id/rgTheme"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="16dp"
-                    android:paddingHorizontal="42dp"
-                    android:checked="true"
-                    android:text="Claro"
-                    android:drawableTop="@drawable/ic_light"/>
-                <RadioButton
-                    style="@style/customRadioButton"
-                    android:id="@+id/rbDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" 
-                    android:paddingVertical="16dp"
-                    android:paddingHorizontal="32dp"
-                    android:checked="false"
-                    android:text="Escuro"
-                    android:drawableTop="@drawable/ic_dark"/>
-            </RadioGroup>
-            <Button
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="16dp"
-                android:textColor="#404040"
-                android:text="Continuar"/>
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <RadioButton
+                        style="@style/customRadioButton"
+                        android:id="@+id/rbLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/two_size_unit"
+                        android:paddingHorizontal="@dimen/four_size_unit"
+                        android:checked="true"
+                        android:text="@string/label_light"
+                        android:drawableTop="@drawable/ic_light"/>
+                    <RadioButton
+                        style="@style/customRadioButton"
+                        android:id="@+id/rbDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:paddingVertical="@dimen/two_size_unit"
+                        android:paddingHorizontal="@dimen/four_size_unit"
+                        android:checked="false"
+                        android:text="@string/label_dark"
+                        android:drawableTop="@drawable/ic_dark"/>
+                </RadioGroup>
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:id="@+id/btnNext"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/two_size_unit"
+                    android:textColor="@color/colorAccentText"
+                    android:text="@string/action_continue"/>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-    <dimen name="halfSizeUnit">4dp</dimen>
-    <dimen name="sizeUnit">8dp</dimen>
-    <dimen name="doubleSizeUnit">16dp</dimen>
-    <dimen name="tripleSizeUnit">24dp</dimen>
-    <dimen name="quadrupleSizeUnit">32dp</dimen>
-    <dimen name="quintupleSizeUnit">40dp</dimen>
+    <dimen name="half_size_unit">4dp</dimen>
+    <dimen name="one_size_unit">8dp</dimen>
+    <dimen name="two_size_unit">16dp</dimen>
+    <dimen name="three_size_unit">24dp</dimen>
+    <dimen name="four_size_unit">32dp</dimen>
+    <dimen name="five_size_unit">40dp</dimen>
+    <dimen name="six_size_unit">58dp</dimen>
+    <dimen name="seven_size_unit">64dp</dimen>
 </resources>

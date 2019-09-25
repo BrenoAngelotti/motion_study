@@ -8,6 +8,5 @@ namespace UserTest.Model
         public int Id { get; set; } = 1;
         public bool HasMotion { get; set; }
         public bool IsSynced { get; set; }
-        public bool DarkTheme { get; set; } = true;
     }
 }

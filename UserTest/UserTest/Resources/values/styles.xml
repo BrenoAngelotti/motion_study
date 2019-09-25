@@ -1,13 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
         <item name="android:textColorPrimary">@color/colorPrimaryTextDark</item>
-        <!--item name="attr:colorBackground">@color/colorBackgroundDark</item -->
 
         <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
@@ -19,15 +18,15 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlNormal">@color/colorAccent</item>
 
+        <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:textColorPrimary">@color/colorPrimary</item>
-        <!--item name="attr:colorBackground">@color/colorBackground</item -->
 
         <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
     <style name="customRadioButton">
-        <item name="android:layout_margin">@dimen/sizeUnit</item>
+        <item name="android:layout_margin">@dimen/one_size_unit</item>
         <item name="android:textAlignment">center</item>
         <item name="android:button">@null</item>
         <item name="android:textColor">@color/colorAccent</item>
@@ -36,7 +35,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:drawablePadding">@dimen/sizeUnit</item>
+        <item name="android:drawablePadding">@dimen/one_size_unit</item>
     </style>
 
 </resources>

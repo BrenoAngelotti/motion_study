@@ -66,6 +66,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ThemeActivity.cs" />
+    <Compile Include="Views\EvaluationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -73,7 +74,7 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\font\RobotoCondensed.ttf" />
     <AndroidResource Include="Resources\font\Eczar.ttf" />
-    <AndroidResource Include="Resources\layout\activity_task.axml">
+    <AndroidResource Include="Resources\layout\activity_evaluation.axml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

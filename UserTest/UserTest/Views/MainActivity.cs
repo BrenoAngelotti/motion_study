@@ -78,7 +78,7 @@ namespace UserTest.Views
 #if DEBUG
             MenuInflater.Inflate(Resource.Menu.menu_debug, menu);
             menu.FindItem(Resource.Id.toggle_motion).SetChecked(App.Current.User.HasMotion);
-            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.User.DarkTheme);
+            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.DarkTheme);
 #endif
             return true;
         }
@@ -91,9 +91,6 @@ namespace UserTest.Views
                     item.SetChecked(!item.IsChecked);
                     App.ToggleMotion();
                     HasMotion();
-                    break;
-                case Resource.Id.toggle_dark:
-                    App.ToggleTheme();
                     break;
                 default:
                     break;

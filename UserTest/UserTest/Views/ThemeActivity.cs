@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Android.Animation;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -20,6 +20,7 @@ namespace UserTest.Views
         RadioGroup RgTheme { get; set; }
         View VwBackground { get; set; }
         View VwSkylineDark { get; set; }
+        Button BtnNext { get; set; }
 
         RelativeLayout RlSelectionIndicator { get; set; }
         bool DarkTheme;
@@ -36,8 +37,20 @@ namespace UserTest.Views
             RlSelectionIndicator = FindViewById<RelativeLayout>(Resource.Id.rlSelectionIndicator);
             VwBackground = FindViewById(Resource.Id.vwBackground);
             VwSkylineDark = FindViewById(Resource.Id.vwSkylineDark);
+            BtnNext = FindViewById<Button>(Resource.Id.btnNext);
 
             RgTheme.CheckedChange += ToggleTheme;
+
+            BtnNext.Click += SetThemeAndProceed;
+        }
+
+        private void SetThemeAndProceed(object sender, EventArgs e)
+        {
+            App.Current.DarkTheme = DarkTheme;
+            var intent = new Intent(this, typeof(EvaluationActivity));
+            intent.PutExtra("ANSWER", DarkTheme ? GetString(Resource.String.label_dark) : GetString(Resource.String.label_light));
+
+            StartActivity(intent);
         }
 
         private void ToggleTheme(object sender, RadioGroup.CheckedChangeEventArgs e)
@@ -48,24 +61,27 @@ namespace UserTest.Views
             var alpha = DarkTheme ? 1f : 0f;
 
             var interpolator = new AccelerateDecelerateInterpolator();
+            
+            if(App.Current.User.HasMotion)
+            {
+                RlSelectionIndicator.Animate()
+                    .Rotation(rotation)
+                    .SetInterpolator(interpolator)
+                    .SetDuration(DURATION)
+                    .Start();
 
-            RlSelectionIndicator.Animate()
-                .Rotation(rotation)
-                .SetInterpolator(interpolator)
-                .SetDuration(DURATION)
-                .Start();
+                VwBackground.Animate()
+                    .Alpha(alpha)
+                    .SetInterpolator(interpolator)
+                    .SetDuration(DURATION)
+                    .Start();
 
-            VwBackground.Animate()
-                .Alpha(alpha)
-                .SetInterpolator(interpolator)
-                .SetDuration(DURATION)
-                .Start();
-
-            VwSkylineDark.Animate()
-                .Alpha(alpha)
-                .SetInterpolator(interpolator)
-                .SetDuration(DURATION)
-                .Start();
+                VwSkylineDark.Animate()
+                    .Alpha(alpha)
+                    .SetInterpolator(interpolator)
+                    .SetDuration(DURATION)
+                    .Start();
+            }
 
             VwSkylineDark.Alpha = alpha;
             VwBackground.Alpha = alpha;
