@@ -7,10 +7,11 @@ using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
 using UserTest.Model;
+using Task = System.Threading.Tasks.Task;
 
 namespace UserTest.Views
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.Light", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.Light", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity
     {
         RelativeLayout Foreground { get; set; }
@@ -19,17 +20,7 @@ namespace UserTest.Views
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_splash);
-            if(App.Current.User == null)
-            {
-                var isAnimated = new Random().NextDouble() >= .5;
-                var user = new User() { HasMotion = isAnimated, IsSynced = false } ;
-                using (var conn = App.Current.GetConnection())
-                {
-                    conn.Insert(user);
-                }
-                App.Current.User = user;
-            }
-            if (App.Current.User.HasMotion)
+            if (App.Current.UserData.HasMotion)
             {
                 Foreground = FindViewById<RelativeLayout>(Resource.Id.splash_foreground);
                 Foreground.TranslationX = -120;
@@ -41,7 +32,7 @@ namespace UserTest.Views
         protected override void OnResume()
         {
             base.OnResume();
-            if (App.Current.User.HasMotion)
+            if (App.Current.UserData.HasMotion)
                 Foreground.Animate().Alpha(1).X(0).SetStartDelay(400).SetInterpolator(new DecelerateInterpolator(2.0f)).SetDuration(800);
 
             Task startupWork = new Task(() => { Startup(); });

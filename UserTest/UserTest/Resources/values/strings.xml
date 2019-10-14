@@ -22,6 +22,7 @@
     <string name="text_second_question">Estou certo de que respondi com a opção {0}</string>
 
     <string name="text_theme_question">Escolha um tema para começar</string>
+    <string name="text_task_question">Escolha seu preferido</string>
     
     <string name="action_continue">Continuar</string>
     

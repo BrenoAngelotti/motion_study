@@ -1,42 +1,42 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
-using Android.Runtime;
 using Android.Widget;
-using UserTest.Model;
 using UserTest.Helpers;
 using Android.Views;
+using Android.Content;
+using System.Linq;
 
 namespace UserTest.Views
 {
-    [Activity(Label="Main", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.KeyboardHidden | Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.ScreenLayout | Android.Content.PM.ConfigChanges.Density | Android.Content.PM.ConfigChanges.UiMode | Android.Content.PM.ConfigChanges.SmallestScreenSize)]
+    [Activity(Label="Main", NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.KeyboardHidden | Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.ScreenLayout | Android.Content.PM.ConfigChanges.Density | Android.Content.PM.ConfigChanges.UiMode | Android.Content.PM.ConfigChanges.SmallestScreenSize)]
     public class MainActivity : AppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_main);
 
-            /*if (!App.Current.User.HasMotion) Window.EnterTransition = null;
-            HasMotion();
+            await FillTestActivity();
 
-            var connection = Util.HasConnection(this);
-            HasConnection(connection);
-
-            await CanSync(connection);*/
-
-            StartActivity(new Android.Content.Intent(this, typeof(ThemeActivity)));
+            NextTask();
         }
 
-        private async System.Threading.Tasks.Task CanSync(bool connection)
+        private async System.Threading.Tasks.Task FillTestActivity()
         {
+            FindViewById<TextView>(Resource.Id.txvMotion).Text = $"Motion: {App.Current.UserData.HasMotion}";
+
+            var connection = Util.HasConnection(this);
+
+            FindViewById<TextView>(Resource.Id.txvConnection).Text = $"Connection: {connection}";
+
             if (connection)
             {
                 var collection = await WebServices.IsDataCollectionActive();
                 FindViewById<TextView>(Resource.Id.txvCollection).Text = $"Collection: {collection}";
 
-                if (App.Current.User.IsSynced)
+                if (App.Current.UserData.IsSynced)
                     return;
 
                 if (collection)
@@ -49,11 +49,8 @@ namespace UserTest.Views
                     else
                     {
                         Toast.MakeText(this, $"Dados enviados com sucesso!", ToastLength.Long).Show();
-                        App.Current.User.IsSynced = true;
-                        using (var conn = App.Current.GetConnection())
-                        {
-                            conn.Update(App.Current.User);
-                        }
+                        App.Current.UserData.IsSynced = true;
+                        App.SaveData();
                     }
                 }
                 else
@@ -63,25 +60,15 @@ namespace UserTest.Views
             }
         }
 
-        private void HasConnection(bool connection)
-        {
-            FindViewById<TextView>(Resource.Id.txvConnection).Text = $"Connection: {connection}";
-        }
-
-        private void HasMotion()
-        {
-            FindViewById<TextView>(Resource.Id.txvMotion).Text = $"Motion: {App.Current.User.HasMotion}";
-        }
-
+#if DEBUG
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-#if DEBUG
             MenuInflater.Inflate(Resource.Menu.menu_debug, menu);
-            menu.FindItem(Resource.Id.toggle_motion).SetChecked(App.Current.User.HasMotion);
-            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.DarkTheme);
-#endif
+            menu.FindItem(Resource.Id.toggle_motion).SetChecked(App.Current.UserData.HasMotion);
+            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.UserData.DarkTheme);
             return true;
         }
+#endif
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -90,13 +77,36 @@ namespace UserTest.Views
                 case Resource.Id.toggle_motion:
                     item.SetChecked(!item.IsChecked);
                     App.ToggleMotion();
-                    HasMotion();
+                    FillTestActivity();
+                    App.SaveData();
                     break;
                 default:
                     break;
             }
 
             return true;
+        }
+
+        void NextTask()
+        {
+            var nextTask = App.Current.UserData.Tasks.FirstOrDefault(t => !t.Finished);
+            if (nextTask != null)
+            {
+                if (nextTask.TaskIdentifier == Enums.ETask.Theme)
+                {
+                    StartActivity(new Intent(this, typeof(ThemeActivity)));
+                }
+                else
+                {
+                    var intent = new Intent(this, typeof(TaskActivity));
+                    intent.PutExtra("TASK", (int)nextTask.TaskIdentifier);
+                    StartActivity(intent);
+                }
+            }
+            else
+            {
+                StartActivity(new Intent(this, typeof(FinalEvaluationActivity)));
+            }
         }
     }
 }

@@ -59,14 +59,17 @@
     <Compile Include="Views\MainActivity.cs" />
     <Compile Include="Views\SplashActivity.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Helpers\Database.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="Helpers\WebServices.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserData.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ThemeActivity.cs" />
     <Compile Include="Views\EvaluationActivity.cs" />
+    <Compile Include="Model\Task.cs" />
+    <Compile Include="Enums\ETask.cs" />
+    <Compile Include="Views\TaskActivity.cs" />
+    <Compile Include="Views\FinalEvaluationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -122,13 +125,40 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_task.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\xml\file_paths.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\avd_selected_unselected.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\avd_unselected_selected.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_selected.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_unselected.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\toggle_avd_test.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
@@ -153,10 +183,13 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.2</Version>
     </PackageReference>
-    <PackageReference Include="sqlite-net-pcl">
-      <Version>1.5.231</Version>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.3.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_splash.axml">
@@ -175,6 +208,8 @@
   <ItemGroup />
   <ItemGroup>
     <Folder Include="Resources\menu\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Resources\xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,16 +1,12 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.Animation;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
+using UserTest.Enums;
 
 namespace UserTest.Views
 {
@@ -33,11 +29,11 @@ namespace UserTest.Views
 
             SetContentView(Resource.Layout.activity_theme);
 
-            RgTheme = FindViewById<RadioGroup>(Resource.Id.rgTheme);
-            RlSelectionIndicator = FindViewById<RelativeLayout>(Resource.Id.rlSelectionIndicator);
-            VwBackground = FindViewById(Resource.Id.vwBackground);
-            VwSkylineDark = FindViewById(Resource.Id.vwSkylineDark);
-            BtnNext = FindViewById<Button>(Resource.Id.btnNext);
+            RgTheme = FindViewById<RadioGroup>(Resource.Id.rg_theme);
+            RlSelectionIndicator = FindViewById<RelativeLayout>(Resource.Id.rl_selection_indicator);
+            VwBackground = FindViewById(Resource.Id.vw_background);
+            VwSkylineDark = FindViewById(Resource.Id.vw_skyline_dark);
+            BtnNext = FindViewById<Button>(Resource.Id.btn_next);
 
             RgTheme.CheckedChange += ToggleTheme;
 
@@ -46,8 +42,9 @@ namespace UserTest.Views
 
         private void SetThemeAndProceed(object sender, EventArgs e)
         {
-            App.Current.DarkTheme = DarkTheme;
+            App.Current.UserData.DarkTheme = DarkTheme;
             var intent = new Intent(this, typeof(EvaluationActivity));
+            intent.PutExtra("TASK", (int)ETask.Theme);
             intent.PutExtra("ANSWER", DarkTheme ? GetString(Resource.String.label_dark) : GetString(Resource.String.label_light));
 
             StartActivity(intent);
@@ -55,14 +52,14 @@ namespace UserTest.Views
 
         private void ToggleTheme(object sender, RadioGroup.CheckedChangeEventArgs e)
         {
-            DarkTheme = FindViewById<RadioButton>(Resource.Id.rbDark).Checked;
+            DarkTheme = FindViewById<RadioButton>(Resource.Id.rb_dark).Checked;
 
             var rotation = 180f * (DarkTheme ? 1 : 0);
             var alpha = DarkTheme ? 1f : 0f;
 
             var interpolator = new AccelerateDecelerateInterpolator();
             
-            if(App.Current.User.HasMotion)
+            if(App.Current.UserData.HasMotion)
             {
                 RlSelectionIndicator.Animate()
                     .Rotation(rotation)

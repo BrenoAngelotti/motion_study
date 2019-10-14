@@ -36,7 +36,7 @@ namespace UserTest.Helpers
 
             var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
-                { "entry.1156489473", (App.Current.User.HasMotion ? "Sim" : "Não") },
+                { "entry.1156489473", (App.Current.UserData.HasMotion ? "Sim" : "Não") },
                 { "entry.1304370013", "Via app" },
                 { "entry.566626876_year", DateTime.Now.Year.ToString() },
                 { "entry.566626876_month", DateTime.Now.Month.ToString() },

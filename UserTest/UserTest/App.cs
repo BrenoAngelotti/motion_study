@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using SQLite;
-using UserTest.Helpers;
+using Newtonsoft.Json;
+using UserTest.Enums;
 using UserTest.Model;
+using Xamarin.Essentials;
 
 namespace UserTest
 {
-    [Application]
+    [Application(AllowBackup = false)]
     public class App : Application
     {
         public static App Current { get; private set; }
-        public bool DarkTheme { get; set; }
-        public User User { get; set; } 
-        public static string DbPath { get { return System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "database.db"); } }
+        public UserData UserData { get; set; }
 
         public App(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
@@ -32,23 +24,42 @@ namespace UserTest
         {
             base.OnCreate();
 
-            using (var conn = GetConnection())
-            {
-                new Database(conn).CreateDataBase();
-                Current.User = conn.Table<User>().FirstOrDefault();
-            }
+            GetData();
+
+            if (Current.UserData == null || Current.UserData.Tasks == null || Current.UserData.Tasks.Count == 0)
+                PrepareUserData();
         }
 
-        public SQLiteConnection GetConnection()
+        private void PrepareUserData()
         {
-            var conn = new SQLiteConnection(DbPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.SharedCache);
-            return conn;
+            var isAnimated = new Random().NextDouble() >= .5;
+            var data = new UserData() { HasMotion = isAnimated, IsSynced = false, Tasks = new List<Task>() };
+
+            var tasks = new List<Task>() { new Task() { TaskIdentifier = ETask.Theme } };
+            for(int i = 1; i < 5; i++)
+            {
+                tasks.Insert((new Random().NextDouble() >= .5 ? 1 : tasks.Count),
+                    new Task() {TaskIdentifier = (ETask)i });
+            }
+            data.Tasks.AddRange(tasks);
+
+            Current.UserData = data;
+        }
+
+        public static void GetData()
+        {
+            Current.UserData = JsonConvert.DeserializeObject<UserData>(Preferences.Get("DATA", "{}"));
+        }
+
+        public static void SaveData()
+        {
+            Preferences.Set("DATA", JsonConvert.SerializeObject(Current.UserData));
         }
 
         public static void ToggleMotion()
         {
-            Current.User.HasMotion ^= true;
-        }   
+            Current.UserData.HasMotion ^= true;
+        }
     }
 
 }

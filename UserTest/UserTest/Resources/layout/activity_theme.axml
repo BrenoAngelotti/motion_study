@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
     <View
-        android:id="@+id/vwBackground"
+        android:id="@+id/vw_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackgroundDark"
@@ -22,19 +22,19 @@
         android:layout_marginTop="@dimen/four_size_unit"
         android:textSize="@dimen/abc_text_size_large_material"/>
     <RelativeLayout
-        android:id="@+id/rlSelectionIndicator"
+        android:id="@+id/rl_selection_indicator"
         android:layout_width="100dp"
         android:layout_height="350dp"
         android:layout_centerInParent="true">
         <ImageView
-            android:id="@+id/ivSun"
+            android:id="@+id/iv_sun"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:src="@drawable/ic_sun"/>
         <ImageView
-            android:id="@+id/ivMoon"
+            android:id="@+id/iv_moon"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -59,14 +59,14 @@
             android:layout_alignParentBottom="true"
             android:layout_weight="3">
             <View
-                android:id="@+id/vwSkyline"
+                android:id="@+id/vw_skyline"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/ic_skyline"
                 android:backgroundTint="@color/colorSurface"/>
             <View
-                android:id="@+id/vwSkylineDark"
+                android:id="@+id/vw_skyline_dark"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -79,37 +79,34 @@
                 android:orientation="vertical"
                 android:gravity="bottom|right">
                 <RadioGroup
-                    android:id="@+id/rgTheme"
+                    android:id="@+id/rg_theme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center">
                     <RadioButton
                         style="@style/customRadioButton"
-                        android:id="@+id/rbLight"
+                        android:id="@+id/rb_light"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingVertical="@dimen/two_size_unit"
-                        android:paddingHorizontal="@dimen/four_size_unit"
                         android:checked="true"
                         android:text="@string/label_light"
                         android:drawableTop="@drawable/ic_light"/>
                     <RadioButton
                         style="@style/customRadioButton"
-                        android:id="@+id/rbDark"
+                        android:id="@+id/rb_dark"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" 
-                        android:paddingVertical="@dimen/two_size_unit"
-                        android:paddingHorizontal="@dimen/four_size_unit"
                         android:checked="false"
                         android:text="@string/label_dark"
                         android:drawableTop="@drawable/ic_dark"/>
                 </RadioGroup>
                 <Button
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:id="@+id/btnNext"
-                    android:layout_width="120dp"
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/two_size_unit"
                     android:layout_margin="@dimen/two_size_unit"
                     android:textColor="@color/colorAccentText"
                     android:text="@string/action_continue"/>

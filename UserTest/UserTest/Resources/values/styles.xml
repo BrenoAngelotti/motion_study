@@ -7,7 +7,8 @@
 
         <item name="android:windowBackground">@color/colorBackgroundDark</item>
         <item name="android:textColorPrimary">@color/colorPrimaryTextDark</item>
-
+        <item name="cardBackgroundColor">@color/colorSurfaceDark</item>
+         
         <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
@@ -20,15 +21,17 @@
 
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="cardBackgroundColor">@color/colorSurface</item>
 
         <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
     <style name="customRadioButton">
-        <item name="android:layout_margin">@dimen/one_size_unit</item>
         <item name="android:textAlignment">center</item>
         <item name="android:button">@null</item>
+        <item name="android:paddingVertical">@dimen/two_size_unit</item>
+        <item name="android:paddingHorizontal">@dimen/four_size_unit</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:background">@drawable/radio_button</item>
         <item name="android:layout_height">wrap_content</item>
