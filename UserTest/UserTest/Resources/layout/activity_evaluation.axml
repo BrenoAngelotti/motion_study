@@ -19,6 +19,7 @@
         android:textSize="@dimen/abc_text_size_large_material"/>
     
     <TextView
+        style="@style/TextAppearance.AppCompat.Subhead"
         android:id="@+id/txv_first_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,26 +28,32 @@
     <Spinner
         android:id="@+id/spn_first_question"
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginBottom="@dimen/four_size_unit"
+        android:background="@drawable/spinner_selector"/>
 
     <TextView
+        style="@style/TextAppearance.AppCompat.Subhead"
         android:id="@+id/txv_second_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/two_size_unit"
         android:layout_marginBottom="@dimen/half_size_unit"
-        android:text="@string/text_second_question"/>
+        android:text="@string/text_second_question"
+        />
     <Spinner
         android:id="@+id/spn_second_question"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/two_size_unit"/>
+        android:layout_height="wrap_content"
+        android:padding="16dp" 
+        android:layout_marginBottom="@dimen/four_size_unit"
+        android:background="@drawable/spinner_selector"/>
 
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/btn_next"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccentText"
+        android:enabled="false"
         android:text="@string/action_continue"/>
 </LinearLayout>

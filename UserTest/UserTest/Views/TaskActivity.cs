@@ -63,32 +63,35 @@ namespace UserTest.Views
             switch (Task)
             {
                 case ETask.CakeIceCream:
-                    SetOption(RbFirstOption, Resource.String.label_cake, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_ice_cream, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbFirstOption, Resource.String.label_cake, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbSecondOption, Resource.String.label_ice_cream, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
                 case ETask.CatDog:
-                    SetOption(RbFirstOption, Resource.String.label_cat, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_dog, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbFirstOption, Resource.String.label_cat, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbSecondOption, Resource.String.label_dog, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
                 case ETask.PizzaHotDog:
-                    SetOption(RbFirstOption, Resource.String.label_pizza, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_hot_dog, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbFirstOption, Resource.String.label_pizza, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbSecondOption, Resource.String.label_hot_dog, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
                 case ETask.SingDance:
-                    SetOption(RbFirstOption, Resource.String.label_sing, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_dance, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbFirstOption, Resource.String.label_sing, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbSecondOption, Resource.String.label_dance, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
                 default:
-                    SetOption(RbFirstOption, Resource.String.label_dark, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_light, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbFirstOption, Resource.String.label_dark, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(RbSecondOption, Resource.String.label_light, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
             }
         }
 
-        private void SetOption(RadioButton radioButton, int textId, int drawableId)
+        private void SetOption(RadioButton radioButton, int textId, int toggleId, int motionToggleId)
         {
             radioButton.Text = GetString(textId);
-            radioButton.SetCompoundDrawablesWithIntrinsicBounds(null, GetDrawable(drawableId), null, null);
+            if(App.Current.UserData.HasMotion)
+                radioButton.SetCompoundDrawablesWithIntrinsicBounds(null, GetDrawable(motionToggleId), null, null);
+            else
+                radioButton.SetCompoundDrawablesWithIntrinsicBounds(null, GetDrawable(toggleId), null, null);
         }
     }
 }

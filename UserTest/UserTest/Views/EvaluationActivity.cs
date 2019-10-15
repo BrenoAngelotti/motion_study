@@ -41,8 +41,29 @@ namespace UserTest.Views
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             SpnFirstQuestion.Adapter = adapter;
             SpnSecondQuestion.Adapter = adapter;
+
+            SpnFirstQuestion.ItemSelected += SpnFirstQuestion_ItemSelected;
+            SpnSecondQuestion.ItemSelected += SpnSecondQuestion_ItemSelected;
             
             BtnNext.Click += NextTask;
+        }
+
+        private void SpnSecondQuestion_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            CheckAnswers();
+        }
+
+        private void SpnFirstQuestion_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            CheckAnswers();
+        }
+
+        private void CheckAnswers()
+        {
+            BtnNext.Enabled = SpnFirstQuestion.SelectedItemPosition != 0 && SpnSecondQuestion.SelectedItemPosition != 0;
+
+            SpnFirstQuestion.Alpha = SpnFirstQuestion.SelectedItemPosition != 0 ? 1f : 0.4f;
+            SpnSecondQuestion.Alpha = SpnSecondQuestion.SelectedItemPosition != 0 ? 1f : 0.4f;
         }
 
         private void NextTask(object sender, EventArgs e)

@@ -108,7 +108,6 @@
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="@dimen/two_size_unit"
                     android:layout_margin="@dimen/two_size_unit"
-                    android:textColor="@color/colorAccentText"
                     android:text="@string/action_continue"/>
             </LinearLayout>
         </RelativeLayout>

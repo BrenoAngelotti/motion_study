@@ -94,7 +94,9 @@ namespace UserTest.Views
             {
                 if (nextTask.TaskIdentifier == Enums.ETask.Theme)
                 {
-                    StartActivity(new Intent(this, typeof(ThemeActivity)));
+                    var intent = new Intent(this, typeof(ThemeActivity));
+                    //intent.SetFlags(ActivityFlags.ClearTop);
+                    StartActivity(intent);
                 }
                 else
                 {

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animated-selector 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/focused"
+        android:drawable="@drawable/outline_shape"
+        android:state_enabled="true"
+        android:state_pressed="true"
+        android:state_window_focused="true" />
+
+    <item
+        android:drawable="@drawable/outline_shape_selected"
+        android:state_enabled="true"
+        android:state_window_focused="true" />
+ 
+    <item android:drawable="@drawable/outline_shape_selected" />
+</animated-selector>

@@ -68,6 +68,5 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:paddingHorizontal="@dimen/two_size_unit"
-        android:textColor="@color/colorAccentText"
         android:text="@string/action_continue"/>
 </RelativeLayout>
