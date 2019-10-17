@@ -18,21 +18,25 @@
     <string name="label_dance">Dançar</string>
 
     <string name="text_question_directive">Responda as duas perguntas com atenção para prosseguir</string>
+    <string name="text_final_question_directive">Responda as duas últimas perguntas para finalizar o teste</string>
     <string name="text_first_question">TIVE certeza de como interagir com a tela anterior</string>
     <string name="text_second_question">TENHO certeza de que respondi com a opção {0} na tela anterior</string>
+    <string name="text_clarity_question">O aplicativo foi bastante claro em como interagir com todas as telas</string>
+    <string name="text_enjoyability_question">Gostei da experiência de utilizar o aplicativo</string>
 
     <string name="text_theme_question">Escolha um tema para começar</string>
     <string name="text_task_question">Escolha seu preferido</string>
     
     <string name="action_continue">Continuar</string>
+    <string name="action_finish">Finalizar</string>
     
     <string-array name="arr_answer_options">
         <item>- Selecione -</item>
-        <item>Discordo plenamente</item>
-        <item>Discordo</item>
-        <item>Não concordo nem discordo</item>
-        <item>Concordo</item>
-        <item>Concordo plenamente</item>
+        <item>1 - Discordo plenamente</item>
+        <item>2 - Discordo</item>
+        <item>3 - Não concordo nem discordo</item>
+        <item>4 - Concordo</item>
+        <item>5 - Concordo plenamente</item>
     </string-array>
 
 </resources>

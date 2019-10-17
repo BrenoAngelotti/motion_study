@@ -27,7 +27,10 @@ namespace UserTest
             GetData();
 
             if (Current.UserData == null || Current.UserData.Tasks == null || Current.UserData.Tasks.Count == 0)
+            {
                 PrepareUserData();
+                SaveData();
+            }
         }
 
         private void PrepareUserData()

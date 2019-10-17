@@ -10,7 +10,7 @@ using UserTest.Enums;
 
 namespace UserTest.Views
 {
-    [Activity(Label = "ThemeActivity")]
+    [Activity(Label = "ThemeActivity", NoHistory = true)]
     public class ThemeActivity : Activity
     {
         RadioGroup RgTheme { get; set; }

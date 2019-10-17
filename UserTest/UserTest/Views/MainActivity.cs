@@ -18,7 +18,7 @@ namespace UserTest.Views
 
             SetContentView(Resource.Layout.activity_main);
 
-            await FillTestActivity();
+            //await FillTestActivity();
 
             NextTask();
         }

@@ -10,7 +10,7 @@ namespace UserTest.Helpers
     {
         const string REPO = "https://raw.githubusercontent.com/BrenoAngelotti/motion_study/master/";
 
-        const string FORM = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSfNa9Bsd-RZk0tw8dq56pCVEtqJdYCMsXmisj3Y_vjwARpFJA/formResponse";
+        const string FORM = "https://docs.google.com//forms/d/e/1FAIpQLSeieYx95v0DvjMSjaAup7Z8NhmTMaq1llmdjv9LHqGcXsnFag/formResponse";
 
         public static async Task<bool> IsDataCollectionActive()
         {
@@ -33,15 +33,30 @@ namespace UserTest.Helpers
 
         public static async Task<bool> SendDataToForm()
         {
-
+            var data = App.Current.UserData;
             var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
-                { "entry.1156489473", (App.Current.UserData.HasMotion ? "Sim" : "Não") },
-                { "entry.1304370013", "Via app" },
-                { "entry.566626876_year", DateTime.Now.Year.ToString() },
-                { "entry.566626876_month", DateTime.Now.Month.ToString() },
-                { "entry.566626876_day", DateTime.Now.Day.ToString() },
-                { "entry.597622892", new Random().Next(0, 10).ToString()},
+                { "entry.1412722627", (data.HasMotion ? "true" : "false") },
+                { "entry.1364788360", (data.DarkTheme ? "true" : "false") },
+
+                { "entry.2045937829", data.ClarityQuestion.ToString() },
+                { "entry.2037255656", data.EnjoyabilityQuestion.ToString() },
+
+                { "entry.84660025", data.Tasks[0].FirstQuestion.ToString() },
+                { "entry.990099456", data.Tasks[0].SecondQuestion.ToString() },
+
+                { "entry.513143045", data.Tasks[1].FirstQuestion.ToString() },
+                { "entry.698483230", data.Tasks[1].SecondQuestion.ToString() },
+
+                { "entry.255989520", data.Tasks[2].FirstQuestion.ToString() },
+                { "entry.54384551", data.Tasks[2].SecondQuestion.ToString() },
+
+                { "entry.1591893337", data.Tasks[3].FirstQuestion.ToString() },
+                { "entry.267786997", data.Tasks[3].SecondQuestion.ToString() },
+
+                { "entry.751604436", data.Tasks[4].FirstQuestion.ToString() },
+                { "entry.1151637867", data.Tasks[4].SecondQuestion.ToString() }
+
             });
 
             try
