@@ -70,9 +70,9 @@ namespace UserTest.Views
                     SetOption(RbFirstOption, Resource.String.label_cat, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     SetOption(RbSecondOption, Resource.String.label_dog, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
                     break;
-                case ETask.PizzaHotDog:
-                    SetOption(RbFirstOption, Resource.String.label_pizza, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_hot_dog, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                case ETask.PizzaPasta:
+                    SetOption(RbFirstOption, Resource.String.label_pizza, Resource.Drawable.toggle_pizza, Resource.Drawable.toggle_avd_pizza);
+                    SetOption(RbSecondOption, Resource.String.label_pasta, Resource.Drawable.toggle_pasta, Resource.Drawable.toggle_avd_pasta);
                     break;
                 case ETask.SingDance:
                     SetOption(RbFirstOption, Resource.String.label_sing, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);

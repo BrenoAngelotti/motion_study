@@ -5,7 +5,7 @@ namespace UserTest.Enums
     {
         Theme = 0,
         CatDog = 1,
-        PizzaHotDog = 2,
+        PizzaPasta = 2,
         CakeIceCream = 3,
         SingDance = 4
     }

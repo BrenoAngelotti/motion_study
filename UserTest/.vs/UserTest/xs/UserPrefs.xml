@@ -1,28 +1,17 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/ClosingActivity.cs">
-    <Files>
-      <File FileName="UserTest/App.cs" Line="32" Column="28" />
-      <File FileName="UserTest/Views/MainActivity.cs" />
-      <File FileName="UserTest/Views/SplashActivity.cs" />
-      <File FileName="UserTest/Model/UserData.cs" />
-      <File FileName="UserTest/Views/FinalEvaluationActivity.cs" />
-      <File FileName="UserTest/Resources/values/strings.xml" />
-      <File FileName="UserTest/Helpers/WebServices.cs" />
-      <File FileName="UserTest/Views/ClosingActivity.cs" Line="32" Column="71" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
-              <Node name="Helpers" expanded="True" />
-              <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
-                <Node name="ClosingActivity.cs" selected="True" />
+                <Node name="TaskActivity.cs" selected="True" />
               </Node>
             </Node>
           </Node>

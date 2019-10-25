@@ -4,10 +4,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        
         <item name="android:windowBackground">@color/colorBackgroundDark</item>
         <item name="android:textColorPrimary">@color/colorPrimaryTextDark</item>
         <item name="cardBackgroundColor">@color/colorSurfaceDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
          
         <item name="android:windowActivityTransitions">true</item>
         <item name="windowActionModeOverlay">true</item>
@@ -18,7 +19,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlNormal">@color/colorAccent</item>
-
+        
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:textColorPrimary">@color/colorPrimary</item>
         <item name="cardBackgroundColor">@color/colorSurface</item>
@@ -39,6 +40,10 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:drawablePadding">@dimen/one_size_unit</item>
+    </style>
+
+    <style name="customRadioButton.Outlined" parent="customRadioButton">
+        <item name="android:drawableTint">@color/colorAccent</item>
     </style>
 
 </resources>
