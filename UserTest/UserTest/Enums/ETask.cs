@@ -7,6 +7,6 @@ namespace UserTest.Enums
         CatDog = 1,
         PizzaPasta = 2,
         CakeIceCream = 3,
-        SingDance = 4
+        SingPlay = 4
     }
 }

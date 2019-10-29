@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/TaskActivity.cs">
+    <Files>
+      <File FileName="UserTest/Views/TaskActivity.cs" Line="24" Column="30" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
+              <Node name="Enums" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
@@ -20,7 +23,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_2" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_2" PreferredExecutionTarget="Android.RX8M708YFHL" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -15,7 +15,7 @@
     <string name="label_ice_cream">Sorvete</string>
 
     <string name="label_sing">Cantar</string>
-    <string name="label_dance">Dançar</string>
+    <string name="label_play">Tocar</string>
 
     <string name="text_question_directive">Responda as duas perguntas com atenção para prosseguir</string>
     <string name="text_final_question_directive">Responda as duas últimas perguntas para finalizar o teste</string>
