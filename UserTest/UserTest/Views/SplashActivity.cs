@@ -1,13 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
-using UserTest.Model;
 using Task = System.Threading.Tasks.Task;
 
 namespace UserTest.Views
@@ -19,6 +16,8 @@ namespace UserTest.Views
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            if(App.Current.UserData != null)
+                SetTheme(App.Current.UserData.DarkTheme ? Resource.Style.AppTheme : Resource.Style.AppTheme_Light);
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_splash);
             if (App.Current.UserData.HasMotion)
@@ -46,7 +45,7 @@ namespace UserTest.Views
         {
             await Task.Delay(1000);
             RunOnUiThread(() => {
-                if(App.Current.UserData.Tasks == null || App.Current.UserData.Tasks.Count == 0 || App.Current.UserData.Tasks.All(t => !t.Finished))
+                if (App.Current.UserData.Tasks == null || App.Current.UserData.Tasks.Count == 0 || App.Current.UserData.Tasks.All(t => !t.Finished))
                     StartActivity(new Intent(Application.Context, typeof(MainActivity)));
 
                 else if(App.Current.UserData.Tasks.Any(t => !t.Finished))

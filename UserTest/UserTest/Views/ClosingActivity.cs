@@ -18,8 +18,10 @@ namespace UserTest.Views
 
         private async System.Threading.Tasks.Task TestActivity()
         {
-            var connection = Util.HasConnection(this);
+            if (App.Current.UserData.IsSynced)
+                return;
 
+            var connection = Util.HasConnection(this);
             if (connection)
             {
                 var collection = await WebServices.IsDataCollectionActive();

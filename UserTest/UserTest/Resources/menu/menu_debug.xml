@@ -11,11 +11,4 @@
         android:checkable="true"
         app:showAsAction="never"
     />
-
-    <item
-        android:id="@+id/toggle_dark"
-        android:title="Dark"
-        android:checkable="true"
-        app:showAsAction="never"
-    />
 </menu>

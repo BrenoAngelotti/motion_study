@@ -36,7 +36,7 @@ namespace UserTest
         private void PrepareUserData()
         {
             var isAnimated = new Random().NextDouble() >= .5;
-            var data = new UserData() { HasMotion = isAnimated, IsSynced = false, Tasks = new List<Task>() };
+            var data = new UserData() { OnBoarding = true, HasMotion = isAnimated, IsSynced = false, Tasks = new List<Task>() };
 
             var tasks = new List<Task>() { new Task() { TaskIdentifier = ETask.Theme } };
             for(int i = 1; i < 5; i++)
@@ -62,6 +62,12 @@ namespace UserTest
         public static void ToggleMotion()
         {
             Current.UserData.HasMotion ^= true;
+        }
+
+        public static void DidOnBoarding()
+        {
+            Current.UserData.OnBoarding = false;
+            SaveData();
         }
     }
 

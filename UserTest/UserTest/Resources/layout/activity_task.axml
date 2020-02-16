@@ -6,17 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/one_size_unit">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/text_task_question"
-        android:layout_alignParentTop="true"
-        android:layout_above="@id/crd_options"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="@dimen/abc_text_size_large_material"/>
-
+    
     <android.support.v7.widget.CardView
         android:id="@+id/crd_options"
         android:layout_width="wrap_content"
@@ -60,13 +50,20 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
+    <TextView
+        style="@style/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/crd_options"
+        android:text="@string/text_task_question"
+        android:gravity="center"/>
+
     <Button
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/customButton"
         android:id="@id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:paddingHorizontal="@dimen/two_size_unit"
-        android:text="@string/action_continue"/>
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

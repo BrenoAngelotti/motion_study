@@ -28,6 +28,11 @@
         <item name="windowActionModeOverlay">true</item>
     </style>
 
+    <style name="AppTheme.OnBoarding" parent="AppTheme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="customRadioButton">
         <item name="android:textAlignment">center</item>
         <item name="android:button">@null</item>
@@ -44,6 +49,19 @@
 
     <style name="customRadioButton.Outlined" parent="customRadioButton">
         <item name="android:drawableTint">@color/colorAccent</item>
+    </style>
+
+    <style name="customButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:paddingHorizontal">@dimen/two_size_unit</item>
+        <item name="android:layout_margin">@dimen/two_size_unit</item>
+        <item name="android:text">@string/action_continue</item>
+    </style>
+
+    <style name="customHeader">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_marginVertical">@dimen/four_size_unit</item>
+        <item name="android:textSize">@dimen/abc_text_size_large_material</item>
     </style>
 
 </resources>

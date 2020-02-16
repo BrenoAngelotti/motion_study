@@ -4,6 +4,7 @@ namespace UserTest.Model
 {
     public class UserData
     {
+        public bool OnBoarding { get; set; }
         public bool HasMotion { get; set; }
         public bool DarkTheme { get; set; }
         public bool IsSynced { get; set; }

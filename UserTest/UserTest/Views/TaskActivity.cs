@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -49,6 +48,7 @@ namespace UserTest.Views
             var intent = new Intent(this, typeof(EvaluationActivity));
             intent.PutExtra("TASK", (int)Task);
             intent.PutExtra("ANSWER", FindViewById<RadioButton>(RadioGroup.CheckedRadioButtonId).Text);
+            intent.SetFlags(ActivityFlags.ClearTop);
 
             StartActivity(intent);
         }

@@ -6,85 +6,107 @@ using UserTest.Helpers;
 using Android.Views;
 using Android.Content;
 using System.Linq;
+using Android.Support.V4.View;
+using Android.Support.V4.App;
+using System.Collections.Generic;
 
 namespace UserTest.Views
 {
-    [Activity(Label="Main", NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.KeyboardHidden | Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.ScreenLayout | Android.Content.PM.ConfigChanges.Density | Android.Content.PM.ConfigChanges.UiMode | Android.Content.PM.ConfigChanges.SmallestScreenSize)]
+    [Activity(Label="Main", Theme = "@style/AppTheme.OnBoarding", NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.KeyboardHidden | Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.ScreenLayout | Android.Content.PM.ConfigChanges.Density | Android.Content.PM.ConfigChanges.UiMode | Android.Content.PM.ConfigChanges.SmallestScreenSize)]
     public class MainActivity : AppCompatActivity
     {
-        protected async override void OnCreate(Bundle savedInstanceState)
+
+        ViewPager ViewPager;
+
+        PagerAdapter Adapter;
+
+        List<RadioButton> Indicators;
+
+        List<OnBoardingFragment> Fragments;
+
+        Button BtnContinue;
+
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
+            if (!App.Current.UserData.OnBoarding)
+                NextTask();
+
             SetContentView(Resource.Layout.activity_main);
 
-            //await FillTestActivity();
+            Fragments = new List<OnBoardingFragment>() {
+                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out)
+            };
 
-            NextTask();
+            Indicators = new List<RadioButton> {
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_0),
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_1),
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_2),
+            };
+
+            BtnContinue = FindViewById<Button>(Resource.Id.btn_continue);
+
+            ViewPager = FindViewById<ViewPager>(Resource.Id.view_pager);
+            Adapter = new OnBoardingAdapter(SupportFragmentManager, Fragments);
+            ViewPager.Adapter = Adapter;
+            ViewPager.SetCurrentItem(0, true);
+
+            ViewPager.PageSelected += ViewPager_PageSelected;
+            BtnContinue.Click += BtnContinue_Click;
         }
 
-        private async System.Threading.Tasks.Task FillTestActivity()
+        private void BtnContinue_Click(object sender, System.EventArgs e)
         {
-            FindViewById<TextView>(Resource.Id.txvMotion).Text = $"Motion: {App.Current.UserData.HasMotion}";
+            if(ViewPager.CurrentItem < Fragments.Count - 1)
+            {
+                ViewPager.SetCurrentItem(ViewPager.CurrentItem + 1, true);
+            }
+            else
+            {
+                App.DidOnBoarding();
+                NextTask();
+            }
+        }
 
+        private void ViewPager_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        {
+            UpdateIndicators(e.Position);
+        }
+
+        private async System.Threading.Tasks.Task TestActivity()
+        {
             var connection = Util.HasConnection(this);
-
-            FindViewById<TextView>(Resource.Id.txvConnection).Text = $"Connection: {connection}";
 
             if (connection)
             {
                 var collection = await WebServices.IsDataCollectionActive();
-                FindViewById<TextView>(Resource.Id.txvCollection).Text = $"Collection: {collection}";
 
                 if (App.Current.UserData.IsSynced)
                     return;
 
                 if (collection)
                 {
-                    var formTest = await WebServices.SendDataToForm();
-                    if (!formTest)
-                    {
-                        Toast.MakeText(this, $"Dados não enviados, tente novamente mais tarde", ToastLength.Long).Show();
-                    }
-                    else
-                    {
-                        Toast.MakeText(this, $"Dados enviados com sucesso!", ToastLength.Long).Show();
-                        App.Current.UserData.IsSynced = true;
-                        App.SaveData();
-                    }
+                    //coleta ativa
                 }
                 else
                 {
-                    Toast.MakeText(this, $"Obrigado pela colaboração, mas já encerramos 🙁", ToastLength.Long).Show();
+                    //coleta inativa
                 }
             }
         }
 
-#if DEBUG
-        public override bool OnCreateOptionsMenu(IMenu menu)
+        void UpdateIndicators(int position)
         {
-            MenuInflater.Inflate(Resource.Menu.menu_debug, menu);
-            menu.FindItem(Resource.Id.toggle_motion).SetChecked(App.Current.UserData.HasMotion);
-            menu.FindItem(Resource.Id.toggle_dark).SetChecked(App.Current.UserData.DarkTheme);
-            return true;
-        }
-#endif
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            switch (item.ItemId)
+            foreach(var indicator in Indicators)
             {
-                case Resource.Id.toggle_motion:
-                    item.SetChecked(!item.IsChecked);
-                    App.ToggleMotion();
-                    FillTestActivity();
-                    App.SaveData();
-                    break;
-                default:
-                    break;
+                if (Indicators.IndexOf(indicator) == position)
+                    indicator.Checked = true;
+                else
+                    indicator.Checked = false;
             }
-
-            return true;
         }
 
         void NextTask()
@@ -95,7 +117,6 @@ namespace UserTest.Views
                 if (nextTask.TaskIdentifier == Enums.ETask.Theme)
                 {
                     var intent = new Intent(this, typeof(ThemeActivity));
-                    //intent.SetFlags(ActivityFlags.ClearTop);
                     StartActivity(intent);
                 }
                 else
@@ -110,5 +131,44 @@ namespace UserTest.Views
                 StartActivity(new Intent(this, typeof(FinalEvaluationActivity)));
             }
         }
+    }
+
+    public class OnBoardingAdapter : FragmentStatePagerAdapter
+    {
+        List<OnBoardingFragment> Fragments;
+        public OnBoardingAdapter(Android.Support.V4.App.FragmentManager manager, List<OnBoardingFragment> fragments) : base(manager)
+        {
+            Fragments = fragments;
+        }
+
+        public override int Count => Fragments.Count;
+
+        public override Android.Support.V4.App.Fragment GetItem(int position)
+        {
+            return Fragments[position];
+        }
+    }
+
+    public class OnBoardingFragment : Android.Support.V4.App.Fragment
+    {
+        public int Text;
+        public int Drawable;
+
+        public OnBoardingFragment(int text, int drawable)
+        {
+            Text = text;
+            Drawable = drawable;
+        }
+
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            View rootView = inflater.Inflate(Resource.Layout.fragment_onboarding, container, false);
+
+            rootView.FindViewById<TextView>(Resource.Id.txv_onboarding).Text = Context.GetString(Text);
+            rootView.FindViewById<ImageView>(Resource.Id.img_onboarding).SetImageDrawable(Context.GetDrawable(Drawable));
+
+            return rootView;
+        }
+
     }
 }

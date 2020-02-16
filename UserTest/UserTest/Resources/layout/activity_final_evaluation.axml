@@ -1,57 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:orientation="vertical"
-    android:paddingHorizontal="@dimen/two_size_unit"
-    android:gravity="top|right">
+    android:paddingHorizontal="@dimen/two_size_unit">
 
     <TextView
+        style="@style/customHeader"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_final_question_directive"
         android:layout_alignParentTop="true"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:layout_marginVertical="@dimen/four_size_unit"
-        android:textSize="@dimen/abc_text_size_large_material"/>
-    
-    <TextView
-        style="@style/TextAppearance.AppCompat.Subhead"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/half_size_unit"
-        android:text="@string/text_clarity_question"/>
-    <Spinner
-        android:id="@+id/spn_clarity_question"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_marginBottom="@dimen/four_size_unit"
-        android:background="@drawable/spinner_selector"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/text_final_question_directive"/>
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Subhead"
+    <LinearLayout
+        android:id="@+id/ll_clarity_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/half_size_unit"
-        android:text="@string/text_enjoyability_question"
-        />
-    <Spinner
-        android:id="@+id/spn_enjoyability_question"
+        android:layout_below="@id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:id="@+id/txv_clarity_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/half_size_unit"
+            android:text="@string/text_clarity_question"/>
+        <Spinner
+            android:id="@+id/spn_clarity_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginBottom="@dimen/four_size_unit"
+            android:background="@drawable/spinner_selector"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_enjoyability_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp" 
-        android:layout_marginBottom="@dimen/four_size_unit"
-        android:background="@drawable/spinner_selector"/>
+        android:layout_below="@id/ll_clarity_question"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/half_size_unit"
+            android:text="@string/text_enjoyability_question"
+            />
+        <Spinner
+            android:id="@+id/spn_enjoyability_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp" 
+            android:layout_marginBottom="@dimen/four_size_unit"
+            android:background="@drawable/spinner_selector"/>
+    </LinearLayout>
 
     <Button
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/customButton"
         android:id="@+id/btn_finish"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:text="@string/action_finish"/>
-</LinearLayout>
+</RelativeLayout>

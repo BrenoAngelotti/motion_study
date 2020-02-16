@@ -13,14 +13,11 @@
         android:background="@color/colorBackgroundDark"
         android:alpha="0"/>
     <TextView
+        style="@style/customHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_theme_question"
         android:layout_alignParentTop="true"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:layout_marginTop="@dimen/four_size_unit"
-        android:textSize="@dimen/abc_text_size_large_material"/>
+        android:text="@string/text_theme_question"/>
     <RelativeLayout
         android:id="@+id/rl_selection_indicator"
         android:layout_width="100dp"
@@ -73,16 +70,17 @@
                 android:background="@drawable/ic_skyline"
                 android:backgroundTint="@color/colorSurfaceDark"
                 android:alpha="0"/>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="bottom|right">
+                android:gravity="bottom|center">
                 <RadioGroup
                     android:id="@+id/rg_theme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_centerInParent="true"
                     android:gravity="center">
                     <RadioButton
                         style="@style/customRadioButton"
@@ -102,14 +100,13 @@
                         android:drawableTop="@drawable/ic_dark"/>
                 </RadioGroup>
                 <Button
-                    style="@style/Widget.AppCompat.Button.Colored"
+                    style="@style/customButton"
                     android:id="@+id/btn_next"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="@dimen/two_size_unit"
-                    android:layout_margin="@dimen/two_size_unit"
-                    android:text="@string/action_continue"/>
-            </LinearLayout>
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
