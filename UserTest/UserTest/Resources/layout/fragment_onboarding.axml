@@ -13,12 +13,13 @@
         android:layout_height="wrap_content"
         android:text="telinha top de boas vindas que pode ter um texto bem comprido mesmo!"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         android:gravity="center"/>
     <ImageView
         android:id="@+id/img_onboarding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_pizza_out"
-        android:tint="@color/colorPrimary"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
 </LinearLayout>

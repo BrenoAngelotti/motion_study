@@ -37,7 +37,7 @@
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:scaleType="fitCenter"
-                android:focusable="false"
+                android:clickable="false"
                 android:layout_margin="@dimen/half_size_unit"
                 android:background="@drawable/selector_page"
                 android:button="@null"
@@ -48,7 +48,7 @@
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:scaleType="fitCenter"
-                android:focusable="false"
+                android:clickable="false"
                 android:layout_margin="@dimen/half_size_unit"
                 android:background="@drawable/selector_page"
                 android:button="@null"/>
@@ -58,13 +58,40 @@
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:scaleType="fitCenter"
-                android:focusable="false"
+                android:clickable="false"
+                android:layout_margin="@dimen/half_size_unit"
+                android:background="@drawable/selector_page"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/intro_indicator_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:layout_margin="@dimen/half_size_unit"
+                android:background="@drawable/selector_page"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/intro_indicator_4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:layout_margin="@dimen/half_size_unit"
+                android:background="@drawable/selector_page"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/intro_indicator_5"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:scaleType="fitCenter"
+                android:clickable="false"
                 android:layout_margin="@dimen/half_size_unit"
                 android:background="@drawable/selector_page"
                 android:button="@null"/>
         </LinearLayout>
     </RelativeLayout>
-
-    
-
 </android.support.design.widget.CoordinatorLayout>

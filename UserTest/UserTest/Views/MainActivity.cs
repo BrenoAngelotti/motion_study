@@ -36,15 +36,21 @@ namespace UserTest.Views
             SetContentView(Resource.Layout.activity_main);
 
             Fragments = new List<OnBoardingFragment>() {
-                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out),
-                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out),
-                new OnBoardingFragment(Resource.String.action_continue, Resource.Drawable.ic_pizza_out)
+                new OnBoardingFragment(Resource.String.text_onboarding_0, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.text_onboarding_1, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.text_onboarding_2, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.text_onboarding_3, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.text_onboarding_4, Resource.Drawable.ic_pizza_out),
+                new OnBoardingFragment(Resource.String.text_onboarding_5, Resource.Drawable.ic_pizza_out)
             };
 
             Indicators = new List<RadioButton> {
                 FindViewById<RadioButton>(Resource.Id.intro_indicator_0),
                 FindViewById<RadioButton>(Resource.Id.intro_indicator_1),
                 FindViewById<RadioButton>(Resource.Id.intro_indicator_2),
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_3),
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_4),
+                FindViewById<RadioButton>(Resource.Id.intro_indicator_5)
             };
 
             BtnContinue = FindViewById<Button>(Resource.Id.btn_continue);

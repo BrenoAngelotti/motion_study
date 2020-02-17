@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/layout/fragment_onboarding.axml">
     <Files>
       <File FileName="UserTest/Views/ClosingActivity.cs" Line="13" Column="112" />
       <File FileName="UserTest/Views/SplashActivity.cs" Line="2" Column="1" />
-      <File FileName="UserTest/Views/MainActivity.cs" Line="93" Column="18" />
+      <File FileName="UserTest/Resources/values/strings.xml" Line="22" Column="69" />
+      <File FileName="UserTest/Views/MainActivity.cs" Line="51" Column="72" />
+      <File FileName="UserTest/Resources/layout/activity_main.axml" Line="21" Column="1" />
+      <File FileName="UserTest/Resources/layout/fragment_onboarding.axml" Line="21" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,12 +17,12 @@
               <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="fragment_onboarding.axml" selected="True" />
+                </Node>
                 <Node name="values" expanded="True" />
               </Node>
-              <Node name="Views" expanded="True">
-                <Node name="MainActivity.cs" selected="True" />
-              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -27,7 +30,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme.Light" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.RX8M708YFHL" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

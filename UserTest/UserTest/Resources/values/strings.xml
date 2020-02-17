@@ -17,15 +17,22 @@
     <string name="label_sing">Cantar</string>
     <string name="label_play">Tocar</string>
 
-    <string name="text_question_directive">Responda as duas perguntas com atenção para prosseguir</string>
+    <string name="text_question_directive">Responda as duas perguntas com atenção para continuar</string>
     <string name="text_final_question_directive">Responda as duas últimas perguntas para finalizar o teste</string>
-    <string name="text_first_question">TIVE certeza de como interagir com a tela anterior</string>
-    <string name="text_second_question">TENHO certeza de que respondi com a opção {0} na tela anterior</string>
+    <string name="text_first_question">Tive certeza de como escolher entre as opções na tela anterior</string>
+    <string name="text_second_question">Tenho CERTEZA de que respondi com a opção "{0}" na tela anterior</string>
     <string name="text_clarity_question">O aplicativo foi bastante claro em como interagir com todas as telas</string>
     <string name="text_enjoyability_question">Gostei da experiência de utilizar o aplicativo</string>
 
-    <string name="text_theme_question">Escolha um tema para começar</string>
-    <string name="text_task_question">Escolha seu preferido</string>
+    <string name="text_onboarding_0">Olá!\n\nPrimeiramente, muito obrigado por participar desta pesquisa. Você é top!\n😂👌</string>
+    <string name="text_onboarding_1">Este aplicativo é parte de um estudo sobre facilidade de uso em aplicativos</string>
+    <string name="text_onboarding_2">Ao final você poderá se informar mais sobre o que está sendo estudado</string>
+    <string name="text_onboarding_3">Para contribuir com o estudo, basta seguir em frente e responder a todas as questões com total honestidade, por mais que algumas pareçam estranhas</string>
+    <string name="text_onboarding_4">Ah, e só para deixar claro, os ÚNICOS dados pessoais que serão pedidos são sua idade e escolaridade (coisa de estatística)</string>
+    <string name="text_onboarding_5">Então vamos começar?</string>
+
+    <string name="text_theme_question">Primeiro de tudo, escolha um tema</string>
+    <string name="text_task_question">Escolha qual das opções abaixo você prefere</string>
     
     <string name="action_continue">Continuar</string>
     <string name="action_finish">Finalizar</string>
