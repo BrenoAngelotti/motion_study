@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/layout/fragment_onboarding.axml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/drawable/avd_cat_off.xml">
     <Files>
-      <File FileName="UserTest/Views/ClosingActivity.cs" Line="13" Column="112" />
-      <File FileName="UserTest/Views/SplashActivity.cs" Line="2" Column="1" />
-      <File FileName="UserTest/Resources/values/strings.xml" Line="22" Column="69" />
-      <File FileName="UserTest/Views/MainActivity.cs" Line="51" Column="72" />
-      <File FileName="UserTest/Resources/layout/activity_main.axml" Line="21" Column="1" />
-      <File FileName="UserTest/Resources/layout/fragment_onboarding.axml" Line="21" Column="45" />
+      <File FileName="UserTest/Views/TaskActivity.cs" Line="85" Column="14" />
+      <File FileName="UserTest/Resources/drawable/toggle_avd_play (copy).xml" Line="20" Column="44" />
+      <File FileName="UserTest/Resources/drawable/avd_cat_off.xml" Line="8" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,9 +13,8 @@
               <Node name="Helpers" expanded="True" />
               <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True">
-                  <Node name="fragment_onboarding.axml" selected="True" />
+                <Node name="drawable" expanded="True">
+                  <Node name="avd_cat_off.xml" selected="True" />
                 </Node>
                 <Node name="values" expanded="True" />
               </Node>
