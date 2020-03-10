@@ -63,24 +63,64 @@ namespace UserTest.Views
             switch (Task)
             {
                 case ETask.CakeIceCream:
-                    SetOption(RbFirstOption, Resource.String.label_cake, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_ice_cream, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(
+                        RbFirstOption,
+                        Resource.String.label_cake,
+                        Resource.Drawable.toggle_test,
+                        Resource.Drawable.toggle_avd_test);
+                    SetOption(
+                        RbSecondOption,
+                        Resource.String.label_ice_cream,
+                        Resource.Drawable.toggle_test,
+                        Resource.Drawable.toggle_avd_test);
                     break;
                 case ETask.CatDog:
-                    SetOption(RbFirstOption, Resource.String.label_dog, Resource.Drawable.toggle_cat, Resource.Drawable.toggle_avd_cat);
-                    SetOption(RbSecondOption, Resource.String.label_cat, Resource.Drawable.toggle_cat, Resource.Drawable.toggle_avd_cat);
+                    SetOption(
+                        RbFirstOption,
+                        Resource.String.label_dog,
+                        Resource.Drawable.toggle_dog,
+                        Resource.Drawable.toggle_avd_dog);
+                    SetOption(
+                        RbSecondOption,
+                        Resource.String.label_cat,
+                        Resource.Drawable.toggle_cat,
+                        Resource.Drawable.toggle_avd_cat);
                     break;
                 case ETask.PizzaPasta:
-                    SetOption(RbFirstOption, Resource.String.label_pizza, Resource.Drawable.toggle_pizza, Resource.Drawable.toggle_avd_pizza);
-                    SetOption(RbSecondOption, Resource.String.label_pasta, Resource.Drawable.toggle_pasta, Resource.Drawable.toggle_avd_pasta);
+                    SetOption(
+                        RbFirstOption,
+                        Resource.String.label_pizza,
+                        Resource.Drawable.toggle_pizza,
+                        Resource.Drawable.toggle_avd_pizza);
+                    SetOption(
+                        RbSecondOption,
+                        Resource.String.label_pasta,
+                        Resource.Drawable.toggle_pasta,
+                        Resource.Drawable.toggle_avd_pasta);
                     break;
                 case ETask.SingPlay:
-                    SetOption(RbFirstOption, Resource.String.label_sing, Resource.Drawable.toggle_sing, Resource.Drawable.toggle_avd_sing);
-                    SetOption(RbSecondOption, Resource.String.label_play, Resource.Drawable.toggle_play, Resource.Drawable.toggle_avd_play);
+                    SetOption(
+                        RbFirstOption,
+                        Resource.String.label_sing,
+                        Resource.Drawable.toggle_sing,
+                        Resource.Drawable.toggle_avd_sing);
+                    SetOption(
+                        RbSecondOption,
+                        Resource.String.label_play,
+                        Resource.Drawable.toggle_play,
+                        Resource.Drawable.toggle_avd_play);
                     break;
                 default:
-                    SetOption(RbFirstOption, Resource.String.label_dark, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
-                    SetOption(RbSecondOption, Resource.String.label_light, Resource.Drawable.toggle_test, Resource.Drawable.toggle_avd_test);
+                    SetOption(
+                        RbFirstOption,
+                        Resource.String.label_dark,
+                        Resource.Drawable.toggle_test,
+                        Resource.Drawable.toggle_avd_test);
+                    SetOption(
+                        RbSecondOption,
+                        Resource.String.label_light,
+                        Resource.Drawable.toggle_test,
+                        Resource.Drawable.toggle_avd_test);
                     break;
             }
         }

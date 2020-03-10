@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/drawable/avd_cat_off.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/strings.xml">
     <Files>
-      <File FileName="UserTest/Views/TaskActivity.cs" Line="85" Column="14" />
-      <File FileName="UserTest/Resources/drawable/toggle_avd_play (copy).xml" Line="20" Column="44" />
-      <File FileName="UserTest/Resources/drawable/avd_cat_off.xml" Line="8" Column="31" />
+      <File FileName="UserTest/Resources/drawable/toggle_avd_dog.xml" Line="20" Column="44" />
+      <File FileName="UserTest/Views/TaskActivity.cs" Line="123" Column="60" />
+      <File FileName="UserTest/Resources/values/strings.xml" Line="44" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,10 +13,10 @@
               <Node name="Helpers" expanded="True" />
               <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True">
-                  <Node name="avd_cat_off.xml" selected="True" />
+                <Node name="drawable" expanded="True" />
+                <Node name="values" expanded="True">
+                  <Node name="strings.xml" selected="True" />
                 </Node>
-                <Node name="values" expanded="True" />
               </Node>
               <Node name="Views" expanded="True" />
             </Node>
@@ -26,7 +26,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.RX8M708YFHL" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
