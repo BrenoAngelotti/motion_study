@@ -62,17 +62,17 @@ namespace UserTest.Views
         {
             switch (Task)
             {
-                case ETask.CakeIceCream:
+                case ETask.GameBoard:
                     SetOption(
                         RbFirstOption,
-                        Resource.String.label_cake,
-                        Resource.Drawable.toggle_test,
-                        Resource.Drawable.toggle_avd_test);
+                        Resource.String.label_game,
+                        Resource.Drawable.toggle_game,
+                        Resource.Drawable.toggle_avd_game);
                     SetOption(
                         RbSecondOption,
-                        Resource.String.label_ice_cream,
-                        Resource.Drawable.toggle_test,
-                        Resource.Drawable.toggle_avd_test);
+                        Resource.String.label_board,
+                        Resource.Drawable.toggle_board,
+                        Resource.Drawable.toggle_avd_board);
                     break;
                 case ETask.CatDog:
                     SetOption(
@@ -128,7 +128,7 @@ namespace UserTest.Views
         private void SetOption(RadioButton radioButton, int textId, int toggleId, int motionToggleId)
         {
             radioButton.Text = GetString(textId);
-            if(App.Current.UserData.HasMotion)
+            if (App.Current.UserData.HasMotion)
                 radioButton.SetCompoundDrawablesWithIntrinsicBounds(null, GetDrawable(motionToggleId), null, null);
             else
                 radioButton.SetCompoundDrawablesWithIntrinsicBounds(null, GetDrawable(toggleId), null, null);

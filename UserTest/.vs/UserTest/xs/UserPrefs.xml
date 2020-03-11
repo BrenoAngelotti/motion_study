@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/strings.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/colors.xml">
     <Files>
-      <File FileName="UserTest/Resources/drawable/toggle_avd_dog.xml" Line="20" Column="44" />
-      <File FileName="UserTest/Views/TaskActivity.cs" Line="123" Column="60" />
-      <File FileName="UserTest/Resources/values/strings.xml" Line="44" Column="51" />
+      <File FileName="UserTest/Views/TaskActivity.cs" Line="117" Column="24" />
+      <File FileName="UserTest/Resources/values/colors.xml" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
+              <Node name="Enums" expanded="True" />
               <Node name="Helpers" expanded="True" />
               <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
                 <Node name="values" expanded="True">
-                  <Node name="strings.xml" selected="True" />
+                  <Node name="colors.xml" selected="True" />
                 </Node>
               </Node>
               <Node name="Views" expanded="True" />
@@ -26,8 +26,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.RX8M708YFHL" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

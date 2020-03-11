@@ -6,7 +6,7 @@ namespace UserTest.Enums
         Theme = 0,
         CatDog = 1,
         PizzaPasta = 2,
-        CakeIceCream = 3,
+        GameBoard = 3,
         SingPlay = 4
     }
 }

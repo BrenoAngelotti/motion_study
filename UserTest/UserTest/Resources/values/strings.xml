@@ -11,8 +11,8 @@
     <string name="label_pasta">Macarrão</string>
     <string name="label_pizza">Pizza</string>
 
-    <string name="label_cake">Bolo</string>
-    <string name="label_ice_cream">Sorvete</string>
+    <string name="label_game">Digital</string>
+    <string name="label_board">Tabuleiro</string>
 
     <string name="label_sing">Cantar</string>
     <string name="label_play">Tocar</string>
