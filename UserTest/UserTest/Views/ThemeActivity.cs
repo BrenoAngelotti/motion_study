@@ -46,7 +46,7 @@ namespace UserTest.Views
             var intent = new Intent(this, typeof(EvaluationActivity));
             intent.PutExtra("TASK", (int)ETask.Theme);
             intent.PutExtra("ANSWER", DarkTheme ? GetString(Resource.String.label_dark) : GetString(Resource.String.label_light));
-
+            intent.SetFlags(ActivityFlags.ClearTop);
             StartActivity(intent);
         }
 

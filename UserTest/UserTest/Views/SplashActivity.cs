@@ -48,10 +48,10 @@ namespace UserTest.Views
                 if (App.Current.UserData.Tasks == null || App.Current.UserData.Tasks.Count == 0 || App.Current.UserData.Tasks.All(t => !t.Finished))
                     StartActivity(new Intent(Application.Context, typeof(MainActivity)));
 
-                else if(App.Current.UserData.Tasks.Any(t => !t.Finished))
+                else if (App.Current.UserData.Tasks.Any(t => !t.Finished))
                     StartActivity(new Intent(Application.Context, typeof(MainActivity)));
 
-                else if(App.Current.UserData.Tasks.All(t => t.Finished) && !App.Current.UserData.FinishedAnswers)
+                else if (App.Current.UserData.Tasks.All(t => t.Finished) && !App.Current.UserData.FinishedAnswers)
                     StartActivity(new Intent(Application.Context, typeof(FinalEvaluationActivity)));
 
                 else

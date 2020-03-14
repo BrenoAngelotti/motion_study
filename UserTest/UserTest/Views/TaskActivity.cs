@@ -7,7 +7,7 @@ using UserTest.Enums;
 
 namespace UserTest.Views
 {
-    [Activity(Label = "TaskActivity")]
+    [Activity(Label = "TaskActivity", NoHistory = true)]
     public class TaskActivity : Activity
     {
         ETask Task { get; set; }

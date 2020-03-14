@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/colors.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/ClosingActivity.cs">
     <Files>
-      <File FileName="UserTest/Views/TaskActivity.cs" Line="117" Column="24" />
-      <File FileName="UserTest/Resources/values/colors.xml" Line="17" Column="1" />
+      <File FileName="UserTest/Views/ClosingActivity.cs" Line="31" Column="13" />
+      <File FileName="UserTest/Resources/layout/activity_closing.axml" Line="24" Column="38" />
+      <File FileName="UserTest/Views/SplashActivity.cs" Line="47" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,11 +15,12 @@
               <Node name="Model" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="values" expanded="True">
-                  <Node name="colors.xml" selected="True" />
-                </Node>
+                <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
               </Node>
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ClosingActivity.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -26,7 +28,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.RX8M708YFHL" />
+  <MonoDevelop.Ide.ItemProperties.UserTest AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="pixel_3" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

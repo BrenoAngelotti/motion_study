@@ -57,11 +57,15 @@
         <item name="android:text">@string/action_continue</item>
     </style>
 
-    <style name="customHeader">
+    <style name="customText">
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginVertical">@dimen/two_size_unit</item>
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:layout_marginVertical">@dimen/four_size_unit</item>
         <item name="android:textSize">@dimen/abc_text_size_large_material</item>
+    </style>
+
+    <style name="customHeader" parent="customText">
+        <item name="android:layout_marginVertical">@dimen/four_size_unit</item>
     </style>
 
 </resources>

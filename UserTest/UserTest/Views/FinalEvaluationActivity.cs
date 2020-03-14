@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace UserTest.Views
 {
-    [Activity(Label = "FinalEvaluationActivity", NoHistory = false)]
+    [Activity(Label = "FinalEvaluationActivity", NoHistory = true)]
     public class FinalEvaluationActivity : Activity
     {
         Spinner SpnClarityQuestion { get; set; }
