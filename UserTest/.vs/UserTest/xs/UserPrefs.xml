@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Views/ClosingActivity.cs">
     <Files>
-      <File FileName="UserTest/Views/ClosingActivity.cs" Line="31" Column="13" />
-      <File FileName="UserTest/Resources/layout/activity_closing.axml" Line="24" Column="38" />
-      <File FileName="UserTest/Views/SplashActivity.cs" Line="47" Column="34" />
+      <File FileName="UserTest/Views/ClosingActivity.cs" Line="11" Column="2" />
+      <File FileName="UserTest/Resources/layout/activity_closing.axml" />
+      <File FileName="UserTest/Views/SplashActivity.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
