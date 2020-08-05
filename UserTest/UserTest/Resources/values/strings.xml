@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TCC</string>
+    <string name="app_name">TCC do Breno</string>
     <string name="action_settings">Settings</string>
 
     <string name="label_light">Claro</string>
@@ -25,11 +25,11 @@
     <string name="text_enjoyability_question">Gostei da experiência de utilizar o aplicativo</string>
 
     <string name="text_onboarding_0">Olá!\n\nPrimeiramente, muito obrigado por participar desta pesquisa. Você é top!\n😂👌</string>
-    <string name="text_onboarding_1">Este aplicativo é parte de um estudo sobre facilidade de uso em aplicativos</string>
+    <string name="text_onboarding_1">Este aplicativo é parte de um estudo sobre facilidade em usar aplicativos</string>
     <string name="text_onboarding_2">Ao final você poderá se informar mais sobre o que está sendo estudado</string>
-    <string name="text_onboarding_3">Para contribuir com o estudo, basta seguir em frente e responder a todas as questões com total honestidade, por mais que algumas pareçam estranhas</string>
-    <string name="text_onboarding_4">Ah, e só para deixar claro, os ÚNICOS dados pessoais que serão pedidos são sua idade e escolaridade (coisa de estatística)</string>
-    <string name="text_onboarding_5">Então vamos começar?</string>
+    <string name="text_onboarding_3">Para contribuir, basta responder a todas as questões com total honestidade</string>
+    <string name="text_onboarding_4">E só para deixar claro, não é você que está sendo avaliado, é o aplicativo!</string>
+    <string name="text_onboarding_5">Vamos começar?</string>
 
     <string name="text_theme_question">Primeiro de tudo, escolha um tema</string>
     <string name="text_task_question">Escolha qual das opções abaixo você prefere</string>
@@ -41,7 +41,7 @@
     <string name="text_sync_fail">Dados não enviados, tente novamente mais tarde</string>
     <string name="text_sync_success">Dados enviados com sucesso!</string>
 
-    <string name="link_study">https://github.com/BrenoAngelotti</string>
+    <string name="link_study">https://github.com/BrenoAngelotti/tcc</string>
 
     <string name="action_continue">Continuar</string>
     <string name="action_finish">Finalizar</string>
