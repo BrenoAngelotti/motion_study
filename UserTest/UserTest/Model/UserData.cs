@@ -12,5 +12,6 @@ namespace UserTest.Model
         public int ClarityQuestion { get; set; }
         public int EnjoyabilityQuestion { get; set; }
         public bool FinishedAnswers { get; set; }
+        public string TestCode { get; set; }
     }
 }

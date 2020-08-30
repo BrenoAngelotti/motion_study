@@ -8,7 +8,7 @@ namespace UserTest.Helpers
 {
     public class WebServices
     {
-        const string REPO = "https://raw.githubusercontent.com/BrenoAngelotti/motion_study/master/";
+        const string REPO = "https://raw.githubusercontent.com/BrenoAngelotti/tcc/master/";
 
         const string FORM = "https://docs.google.com//forms/d/e/1FAIpQLSeieYx95v0DvjMSjaAup7Z8NhmTMaq1llmdjv9LHqGcXsnFag/formResponse";
 
@@ -55,8 +55,9 @@ namespace UserTest.Helpers
                 { "entry.267786997", data.Tasks[3].SecondQuestion.ToString() },
 
                 { "entry.751604436", data.Tasks[4].FirstQuestion.ToString() },
-                { "entry.1151637867", data.Tasks[4].SecondQuestion.ToString() }
+                { "entry.1151637867", data.Tasks[4].SecondQuestion.ToString() },
 
+                { "entry.1277033517", data.TestCode }
             });
 
             try

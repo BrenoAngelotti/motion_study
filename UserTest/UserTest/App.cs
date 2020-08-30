@@ -4,6 +4,7 @@ using Android.App;
 using Android.Runtime;
 using Newtonsoft.Json;
 using UserTest.Enums;
+using UserTest.Helpers;
 using UserTest.Model;
 using Xamarin.Essentials;
 
@@ -36,7 +37,7 @@ namespace UserTest
         private void PrepareUserData()
         {
             var isAnimated = new Random().NextDouble() >= .5;
-            var data = new UserData() { OnBoarding = true, HasMotion = isAnimated, IsSynced = false, Tasks = new List<Task>() };
+            var data = new UserData() { OnBoarding = true, HasMotion = isAnimated, IsSynced = false, Tasks = new List<Task>(), TestCode = Util.GetTestCode() };
 
             var tasks = new List<Task>() { new Task() { TaskIdentifier = ETask.Theme } };
             for(int i = 1; i < 5; i++)

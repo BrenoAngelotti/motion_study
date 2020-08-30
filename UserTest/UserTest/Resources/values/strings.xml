@@ -35,12 +35,19 @@
     <string name="text_task_question">Escolha qual das opções abaixo você prefere</string>
 
     <string name="text_sending_data">Enviando dados, aguarde</string>
-    <string name="text_thank_you">Obrigado por colaborar com a pesquisa!</string>
-    <string name="text_objectives">Clique abaixo para entender mais sobre o que está sendo estudado</string>
+    <string name="text_thank_you">Obrigado pelo interesse em colaborar com a pesquisa!</string>
+    <string name="text_data_collection_done">Nossa coleta de dados já foi finalizada</string>
+    <string name="text_objectives">Se quiser conhecer melhor o estudo, clique abaixo</string>
+
+    <string name="text_test_code">Cód. do teste: "{0}"</string>
 
     <string name="text_sync_fail">Dados não enviados, tente novamente mais tarde</string>
     <string name="text_sync_success">Dados enviados com sucesso!</string>
+    
+    <string name="text_no_connection">Verifique sua conexão com a internet e tente novamente</string>
+    <string name="text_retry">Tentar novamente</string>
 
+    <string name="link_study_button">Ver estudo</string>
     <string name="link_study">https://github.com/BrenoAngelotti/tcc</string>
 
     <string name="action_continue">Continuar</string>

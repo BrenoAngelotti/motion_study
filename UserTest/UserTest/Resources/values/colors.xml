@@ -19,4 +19,7 @@
     <color name="colorSurfaceDark">#1C1C1E</color>
 
     <color name="colorWidgetBackground">#26282F</color>
+
+    <color name="colorError">#FF0000</color>
+    <color name="colorErrorDark">#FF5252</color>
 </resources>

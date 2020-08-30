@@ -9,6 +9,7 @@ using System.Linq;
 using Android.Support.V4.View;
 using Android.Support.V4.App;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace UserTest.Views
 {
@@ -25,14 +26,13 @@ namespace UserTest.Views
         List<OnBoardingFragment> Fragments;
 
         Button BtnContinue;
+        Button BtnRetry;
+        LinearLayout LlRetry;
+        RelativeLayout RlPagerControls;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            if (!App.Current.UserData.OnBoarding)
-                NextTask();
-
             SetContentView(Resource.Layout.activity_main);
 
             Fragments = new List<OnBoardingFragment>() {
@@ -54,6 +54,9 @@ namespace UserTest.Views
             };
 
             BtnContinue = FindViewById<Button>(Resource.Id.btn_continue);
+            BtnRetry = FindViewById<Button>(Resource.Id.btn_retry);
+            LlRetry = FindViewById<LinearLayout>(Resource.Id.ll_retry);
+            RlPagerControls = FindViewById<RelativeLayout>(Resource.Id.rl_pager_controls);
 
             ViewPager = FindViewById<ViewPager>(Resource.Id.view_pager);
             Adapter = new OnBoardingAdapter(SupportFragmentManager, Fragments);
@@ -62,6 +65,47 @@ namespace UserTest.Views
 
             ViewPager.PageSelected += ViewPager_PageSelected;
             BtnContinue.Click += BtnContinue_Click;
+            BtnRetry.Click += BtnRetry_Click;
+
+            await CheckData();
+        }
+
+        private async void BtnRetry_Click(object sender, System.EventArgs e)
+        {
+            await CheckData();
+        }
+
+        private async Task CheckData()
+        {
+            if (!App.Current.UserData.OnBoarding)
+                NextTask();
+
+            var connection = Util.HasConnection(this);
+            if (connection)
+            {
+                var collection = await WebServices.IsDataCollectionActive();
+                if (!collection)
+                {
+                    var intent = new Intent(this, typeof(ClosingActivity));
+                    intent.PutExtra("COLLECTION", false);
+                    StartActivity(intent);
+                }
+                else
+                {
+                    SwapContent(EMainActivityState.Connected);
+                }
+            }
+            else
+            {
+                SwapContent(EMainActivityState.NoConnection);
+            }
+        }
+
+        private void SwapContent(EMainActivityState state)
+        {
+            ViewPager.Visibility = (state == EMainActivityState.Connected ? Android.Views.ViewStates.Visible : Android.Views.ViewStates.Gone);
+            RlPagerControls.Visibility = (state == EMainActivityState.Connected ? Android.Views.ViewStates.Visible : Android.Views.ViewStates.Gone);
+            LlRetry.Visibility = (state == EMainActivityState.NoConnection ? Android.Views.ViewStates.Visible : Android.Views.ViewStates.Gone);
         }
 
         private void BtnContinue_Click(object sender, System.EventArgs e)
@@ -176,5 +220,11 @@ namespace UserTest.Views
             return rootView;
         }
 
+    }
+
+    enum EMainActivityState
+    {
+        NoConnection,
+        Connected
     }
 }

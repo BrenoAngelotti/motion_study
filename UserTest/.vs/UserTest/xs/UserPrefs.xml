@@ -1,17 +1,12 @@
 ﻿<Properties StartupConfiguration="{99F21E94-E678-41AA-99B3-B41ADF827668}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserTest/Resources/values/strings.xml">
-    <Files>
-      <File FileName="UserTest/Views/ClosingActivity.cs" Line="7" Column="22" />
-      <File FileName="UserTest/Resources/layout/activity_closing.axml" />
-      <File FileName="UserTest/Views/SplashActivity.cs" />
-      <File FileName="UserTest/Resources/values/strings.xml" Line="32" Column="43" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UserTest" expanded="True">
             <Node name="UserTest" expanded="True">
               <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True">
                   <Node name="strings.xml" selected="True" />
                 </Node>
@@ -20,9 +15,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
